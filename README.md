@@ -8,6 +8,7 @@
 - **產品類型**: A BIM Fire Safety Checker  
 - **活動**: Geneva Invention  
 - **託管路徑**: `https://www.bd.gov.hk/en/resources/online-tools/building-information-modelling/index_geneva_firecheck4d.html`
+- **開發預覽（GitHub Pages）**: [https://bdbim.github.io/BIM-E-leaflet/index_geneva_firecheck4d.html](https://bdbim.github.io/BIM-E-leaflet/index_geneva_firecheck4d.html)
 
 ---
 
@@ -82,9 +83,9 @@ CSS 變數：`--color-accent`、`--color-accent-secondary`（見 `css/style.css`
 | 數據到合規 | From Data to Compliance | 法規轉機器可讀參數、自動審查 |
 | 全球應用 | Global Adoption | 多語言法規編碼、FireCheck 六邊形概念圖 |
 | 智能功能 | Smart Features | Smart INPUT / CHECK / IMPORT |
-| 設計確定性 | Certitude de conception | 疏散、IFC、空間、行走距離等分析 |
-| 施工確定性 | Certitude de construction | 耐火構造、材料追溯、消防救援、改動與加建 |
-| 生命週期確定性 | Certitude du cycle de vie | 生命週期相關說明 |
+| 設計確定性 | Certitude de conception | 疏散、IFC、空間、行走距離、耐火構造、消防救援 |
+| 施工確定性 | Certitude de construction | 耐火材料追溯 |
+| 生命週期確定性 | Certitude du cycle de vie | 改動與加建 |
 
 ---
 
