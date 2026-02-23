@@ -1,0 +1,10 @@
+title: 
+description: 
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .github/
+  - .jekyll-cache/
+
