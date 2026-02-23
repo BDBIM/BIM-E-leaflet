@@ -7,4 +7,7 @@ exclude:
   - Gemfile.lock
   - .github/
   - .jekyll-cache/
+  - .jekyll-metadata
+  - vendor/
+  - .bundle/
 
