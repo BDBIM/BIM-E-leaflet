@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FireCheck 4D — A BIM Fire Safety Checker | Geneva Invention</title>
+  <meta name="description" content="FireCheck 4D: BIM fire safety checker for automated compliance, evacuation analysis, and fire resisting construction. Buildings Department, Tsinghua University, VIRCON.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="e-leaflet-header">
+    <div class="e-leaflet-header-inner">
+      <span class="brand">FireCheck 4D</span>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="#benefits" data-i18n="nav_benefits">Benefits</a></li>
+          <li><a href="#compliance" data-i18n="nav_compliance">Data to Compliance</a></li>
+          <li><a href="#smart-features" data-i18n="nav_smart_features">Smart Features</a></li>
+          <li><a href="#capabilities" data-i18n="nav_capabilities">Capabilities</a></li>
+          <li><a href="#more-info" data-i18n="nav_more_info">More Information</a></li>
+        </ul>
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+          <span class="lang-sep">|</span>
+          <button type="button" class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Floating sidebar for mobile (MVRDV-style) -->
+  <div class="nav-sidebar-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <aside class="nav-sidebar" id="nav-sidebar" aria-label="Navigation menu">
+    <button type="button" class="nav-sidebar-close" aria-label="Close menu">&times;</button>
+    <ul class="nav-sidebar-links">
+      <li><a href="#benefits" data-i18n="nav_benefits">Benefits</a></li>
+      <li><a href="#compliance" data-i18n="nav_compliance">Data to Compliance</a></li>
+      <li><a href="#smart-features" data-i18n="nav_smart_features">Smart Features</a></li>
+      <li><a href="#capabilities" data-i18n="nav_capabilities">Capabilities</a></li>
+      <li><a href="#more-info" data-i18n="nav_more_info">More Information</a></li>
+    </ul>
+    <div class="nav-sidebar-lang">
+      <button type="button" class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+      <span class="lang-sep">|</span>
+      <button type="button" class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero" aria-label="Key highlight">
+      <div class="hero-bg">
+        <video src="assets/gifs/start_video.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <p class="hero-tag" data-i18n="hero_tag">Geneva Invention — BIM Fire Safety</p>
+        <h1 class="hero-title">FireCheck 4D</h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">A BIM Fire Safety Checker — translating regulatory requirements into machine-readable parameters for automated vetting and design certainty.</p>
+        <span class="product-badge" data-i18n="hero_badge">A BIM Fire Safety Checker</span>
+      </div>
+    </section>
+
+    <section id="benefits" class="section-alt">
+      <p class="section-tag" data-i18n="benefits_tag">Benefits</p>
+      <h2 class="section-title" data-i18n="benefits_title">Protect our homes through better fire design</h2>
+      <p class="section-lead" data-i18n="benefits_lead">Protect our homes through better fire design. FireCheck 4D supports productivity gains and highlights the global impact of fire safety.</p>
+      <div class="stats-row">
+        <div class="stat-card">
+          <p class="stat-value" data-count-to="30" data-suffix="%">0%</p>
+          <p class="stat-label" data-i18n="stat_productivity">Productivity</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-value" data-count-to="18000" data-format="integer">0</p>
+          <p class="stat-label" data-i18n="stat_victims">Annual global victims</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-value" data-count-to="50" data-suffix="B EUR">0</p>
+          <p class="stat-label" data-i18n="stat_loss">Estimated economic loss</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="compliance">
+      <p class="section-tag" data-i18n="compliance_tag">From Data to Compliance</p>
+      <h2 class="section-title" data-i18n="compliance_title">Translate regulatory requirements into machine-readable parameters for automated vetting</h2>
+      <p class="section-lead" data-i18n="compliance_lead">BIM models and structured data schemas enable automated compliance checking. Human expertise and machine processing work together on the BIM model to deliver code compliance status.</p>
+      <div class="media-block media-block--video">
+        <video src="assets/gifs/automated%20vetting.mp4" autoplay muted loop playsinline></video>
+      </div>
+    </section>
+
+    <section id="global-adoption" class="section-alt">
+      <p class="section-tag" data-i18n="global_tag">Global Adoption</p>
+      <h2 class="section-title" data-i18n="global_title">Codify regulatory requirements in various natural languages</h2>
+      <p class="section-lead" data-i18n="global_lead">Regulatory requirements can be translated and codified for rapid deployment and easy adaptation across jurisdictions.</p>
+      <div class="media-block media-block--video">
+        <video src="assets/gifs/Codify%20regulatory%20requirements%20in%20various%20natural%20languages.mp4" autoplay muted loop playsinline></video>
+      </div>
+    </section>
+
+    <section id="smart-features">
+      <p class="section-tag" data-i18n="smart_tag">Smart Features</p>
+      <h2 class="section-title" data-i18n="smart_title">Three pillars for seamless BIM fire safety workflow</h2>
+      <div class="features-grid">
+        <article class="feature-card">
+          <h3 data-i18n-html="smart_input_title"><span class="feature-icon">↑</span> Smart INPUT</h3>
+          <p data-i18n="smart_input_desc">Instant and automatic filling of essential parameters from IFC files for seamless parameter input.</p>
+          <div class="media-block" aria-label="Smart INPUT screenshot">
+            <img src="assets/images/smart_input.png" alt="Software interface with drawings and property panel" loading="lazy">
+          </div>
+        </article>
+        <article class="feature-card">
+          <h3 data-i18n-html="smart_check_title"><span class="feature-icon">✓</span> Smart CHECK</h3>
+          <p data-i18n="smart_check_desc">Identification of missing parameters and data irregularities in the BIM model for seamless automatic correction.</p>
+          <div class="media-block" aria-label="Smart CHECK screenshot">
+            <img src="assets/images/smart_check.jpg" alt="Report view with highlighted issues" loading="lazy">
+          </div>
+        </article>
+        <article class="feature-card">
+          <h3 data-i18n-html="smart_import_title"><span class="feature-icon">↓</span> Smart IMPORT</h3>
+          <p data-i18n="smart_import_desc">Systematic import of schedules into IFC for production and handling of submission documents.</p>
+          <div class="media-block" aria-label="Smart IMPORT screenshot">
+            <img src="assets/images/smart_import.png" alt="Schedule or table view" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="certitude-band" data-i18n="certitude_design">Certitude de conception</div>
+
+    <section id="capabilities">
+      <p class="section-tag" data-i18n="capabilities_tag">Design & analysis</p>
+      <h2 class="section-title" data-i18n="capabilities_title">Simulate and analyse for statutory compliance</h2>
+
+      <article class="content-block">
+        <h3 class="block-title" data-i18n="evacuation_title">Evacuation sequence analysis</h3>
+        <p class="section-lead" data-i18n="evacuation_lead">Simulate effort for identifying evacuation paths — optimum design support for evacuation routes and key areas.</p>
+        <div class="media-block media-block--video">
+          <video src="assets/gifs/Evacuation%20sequence%20analysis.mp4" autoplay muted loop playsinline></video>
+        </div>
+      </article>
+
+      <article class="content-block">
+        <h3 class="block-title" data-i18n="ifc_title">IFC data schema</h3>
+        <p class="section-lead" data-i18n="ifc_lead">Create structuring parameters for machine-learning translation of regulatory requirements — graphics to data.</p>
+        <div class="media-block">
+          <img src="assets/images/IFC_data_schema.jpg" alt="Building floor isometric with coloured zones" loading="lazy">
+        </div>
+      </article>
+
+      <article class="content-block">
+        <h3 class="block-title" data-i18n="space_title">Space to space approach</h3>
+        <p class="section-lead" data-i18n="space_lead">Compute optimal population to determine required width of safety exits — optimize circulation for occupant movement and safe egress.</p>
+        <div class="media-block">
+          <img src="assets/images/Space%20to%20space%20approach.png" alt="Plan with occupants and exit width data" loading="lazy">
+        </div>
+      </article>
+
+      <article class="content-block">
+        <h3 class="block-title" data-i18n="travel_title">Travel distance assessment</h3>
+        <p class="section-lead" data-i18n="travel_lead">Deploy pathfinding algorithms for precise statutory compliance.</p>
+        <div class="media-block media-block--video">
+          <video src="assets/gifs/Travel%20distance%20assessment.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="media-row media-row--three">
+          <figure class="media-item">
+            <img src="assets/gifs/travel_distance_Identify_the_farthest_point.gif" alt="Identify the farthest point for travel distance assessment" loading="lazy">
+            <figcaption data-i18n="fig_farthest">Identify the farthest point</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="assets/gifs/travel_distance_shortest_path.gif" alt="Shortest path calculation for travel distance" loading="lazy">
+            <figcaption data-i18n="fig_shortest">Shortest path</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="assets/gifs/travel_distance_straight_skeleton.gif" alt="Straight skeleton for travel distance analysis" loading="lazy">
+            <figcaption data-i18n="fig_skeleton">Straight skeleton</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="content-block">
+        <h3 class="block-title" data-i18n="fire_resist_title">Fire resisting construction</h3>
+        <p class="section-lead" data-i18n="fire_resist_lead">Automate integrity assessment of fire compartmentation.</p>
+        <div class="media-block media-block--video">
+          <video src="assets/gifs/Fire%20resisting%20construction.mp4" autoplay muted loop playsinline></video>
+        </div>
+      </article>
+    </section>
+
+    <div class="certitude-band" data-i18n="certitude_construction">Certitude de construction</div>
+
+    <section class="section-alt">
+      <article class="content-block">
+        <h3 class="block-title" data-i18n="traceability_title">Fire rated material traceability</h3>
+        <p class="section-lead" data-i18n="traceability_lead">Link design model with actual construction for verified compliance — material tracking and site verification.</p>
+        <div class="media-block media-block--video">
+          <video src="assets/gifs/Fire%20rated%20material%20traceability.mp4" autoplay muted loop playsinline controls></video>
+        </div>
+      </article>
+
+      <article class="content-block">
+        <h3 class="block-title" data-i18n="firefighting_title">Firefighting and rescue</h3>
+        <p class="section-lead" data-i18n="firefighting_lead">Spatial analysis of building facade served by emergency vehicular access.</p>
+        <div class="media-block"><span>Image/GIF: access routes, fire appliance symbols, aerial view</span></div>
+      </article>
+
+      <article class="content-block">
+        <h3 class="block-title" data-i18n="alterations_title">Alterations and additions</h3>
+        <p class="section-lead" data-i18n="alterations_lead">Simulate impact to ensure continuous statutory compliance — extensions, repartitioning, staircase capacity.</p>
+        <div class="media-block media-block--video">
+          <video src="assets/gifs/Alterations%20and%20additions.mp4" autoplay muted loop playsinline></video>
+        </div>
+      </article>
+    </section>
+
+    <div class="certitude-band" data-i18n="certitude_lifecycle">Certitude du cycle de vie</div>
+
+    <section id="more-info" class="more-info">
+      <p class="more-info-text" data-i18n="more_info">More Information / Plus d'informations</p>
+      <div class="qr-placeholder">QR code<br>(replace with assets/images/qr.png)</div>
+    </section>
+  </main>
+
+  <footer class="e-leaflet-footer">
+    <p data-i18n="footer_main">FireCheck 4D — A BIM Fire Safety Checker. Buildings Department · Tsinghua University · VIRCON.</p>
+    <p><span data-i18n="footer_hosted">Hosted at</span> <a href="https://www.bd.gov.hk/en/resources/online-tools/building-information-modelling/index_geneva_firecheck4d.html">bd.gov.hk</a>.</p>
+  </footer>
+
+  <script src="js/firecheck4d_translate.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
