@@ -11,25 +11,28 @@
   <header class="e-leaflet-header">
     <div class="e-leaflet-header-inner">
       <span class="brand">FireCheck 4D</span>
-      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
-      <nav class="nav-desktop">
-        <ul class="nav-links">
-          <li><a href="#benefits" data-i18n="nav_benefits">Benefits</a></li>
-          <li><a href="#compliance" data-i18n="nav_compliance">Data to Compliance</a></li>
-          <li><a href="#smart-features" data-i18n="nav_smart_features">Smart Features</a></li>
-          <li><a href="#capabilities" data-i18n="nav_capabilities">Capabilities</a></li>
-          <li><a href="#more-info" data-i18n="nav_more_info">More Information</a></li>
-        </ul>
+      <div class="header-right">
+        <nav class="nav-desktop">
+          <ul class="nav-links">
+            <li><a href="#benefits" data-i18n="nav_benefits">Benefits</a></li>
+            <li><a href="#compliance" data-i18n="nav_compliance">Data to Compliance</a></li>
+            <li><a href="#smart-features" data-i18n="nav_smart_features">Smart Features</a></li>
+            <li><a href="#capabilities" data-i18n="nav_capabilities">Capabilities</a></li>
+            <li><a href="#game" data-i18n="nav_game">Online Game</a></li>
+            <li><a href="#more-info" data-i18n="nav_more_info">More Information</a></li>
+          </ul>
+        </nav>
         <div class="lang-switcher">
           <button type="button" class="lang-btn active" data-lang="en" aria-label="English">EN</button>
           <span class="lang-sep">|</span>
           <button type="button" class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
         </div>
-      </nav>
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -42,6 +45,7 @@
       <li><a href="#compliance" data-i18n="nav_compliance">Data to Compliance</a></li>
       <li><a href="#smart-features" data-i18n="nav_smart_features">Smart Features</a></li>
       <li><a href="#capabilities" data-i18n="nav_capabilities">Capabilities</a></li>
+      <li><a href="#game" data-i18n="nav_game">Online Game</a></li>
       <li><a href="#more-info" data-i18n="nav_more_info">More Information</a></li>
     </ul>
     <div class="nav-sidebar-lang">
@@ -52,7 +56,7 @@
   </aside>
 
   <main>
-    <section class="hero" aria-label="Key highlight">
+    <section id="game" class="hero" aria-label="Key highlight">
       <div class="hero-bg">
         <video src="assets/videos/start_video.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
       </div>
@@ -61,7 +65,10 @@
         <p class="hero-tag" data-i18n="hero_tag">Geneva Invention — BIM Fire Safety</p>
         <h1 class="hero-title">FireCheck 4D</h1>
         <p class="hero-subtitle" data-i18n="hero_subtitle">A BIM Fire Safety Checker — translating regulatory requirements into machine-readable parameters for automated vetting and design certainty.</p>
-        <span class="product-badge" data-i18n="hero_badge">A BIM Fire Safety Checker</span>
+        <!-- <span class="product-badge" data-i18n="hero_badge">A BIM Fire Safety Checker</span> -->
+        <p class="hero-game-cta">
+          <a href="https://bdbim.github.io/FireSafely_BFS_Game/" target="_blank" rel="noopener noreferrer" class="game-cta-btn hero-game-btn" data-i18n="game_btn">Play Fire Safely Game →</a>
+        </p>
       </div>
     </section>
 
@@ -226,6 +233,31 @@
       <p class="more-info-text" data-i18n="more_info">More Information / Plus d'informations</p>
       <div class="qr-placeholder">QR code<br>(replace with assets/images/qr.png)</div>
     </section>
+
+    <div class="footer-logos">
+      <div class="footer-logos-track" aria-hidden="true">
+        <div class="footer-logos-row">
+          <img src="assets/images/bd logo white.png" alt="Buildings Department" class="footer-logo" width="120" height="60">
+          <img src="assets/images/chingWah_white.png" alt="Tsinghua University" class="footer-logo" width="120" height="60">
+          <img src="assets/images/vircon_white.png" alt="VIRCON" class="footer-logo" width="120" height="60">
+        </div>
+        <div class="footer-logos-row" aria-hidden="true">
+          <img src="assets/images/bd logo white.png" alt="" class="footer-logo" width="120" height="60">
+          <img src="assets/images/chingWah_white.png" alt="" class="footer-logo" width="120" height="60">
+          <img src="assets/images/vircon_white.png" alt="" class="footer-logo" width="120" height="60">
+        </div>
+        <div class="footer-logos-row" aria-hidden="true">
+          <img src="assets/images/bd logo white.png" alt="" class="footer-logo" width="120" height="60">
+          <img src="assets/images/chingWah_white.png" alt="" class="footer-logo" width="120" height="60">
+          <img src="assets/images/vircon_white.png" alt="" class="footer-logo" width="120" height="60">
+        </div>
+        <div class="footer-logos-row" aria-hidden="true">
+          <img src="assets/images/bd logo white.png" alt="" class="footer-logo" width="120" height="60">
+          <img src="assets/images/chingWah_white.png" alt="" class="footer-logo" width="120" height="60">
+          <img src="assets/images/vircon_white.png" alt="" class="footer-logo" width="120" height="60">
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="e-leaflet-footer">

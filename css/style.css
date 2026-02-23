@@ -44,6 +44,10 @@ body {
 
 /* Header */
 .e-leaflet-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
   padding: var(--space-unit) 0;
 }
@@ -64,6 +68,13 @@ body {
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--color-accent);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 nav {
@@ -261,6 +272,10 @@ nav {
     display: none;
   }
 
+  .header-right .lang-switcher {
+    margin-left: 0;
+  }
+
   .nav-sidebar-overlay,
   .nav-sidebar {
     display: block;
@@ -376,6 +391,19 @@ nav {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   animation: hero-fade-in 0.6s ease-out 0.55s both;
+}
+
+.hero-game-cta {
+  margin-top: 1.5rem;
+  animation: hero-fade-in 0.6s ease-out 0.7s both;
+}
+
+.hero .hero-game-btn {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.hero .hero-game-btn:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
 }
 
 .product-badge {
@@ -603,6 +631,39 @@ section {
   margin: var(--space-lg) 0;
 }
 
+/* Game CTA — redirect to online game */
+.game-cta {
+  text-align: center;
+}
+
+.game-cta-wrap {
+  margin: var(--space-lg) 0 0;
+}
+
+.game-cta-btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-fillet);
+  transition: background 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 4px 12px rgba(235, 75, 155, 0.3);
+}
+
+.game-cta-btn:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(235, 75, 155, 0.35);
+}
+
+.game-cta-btn:focus {
+  outline: 2px solid var(--color-accent-secondary);
+  outline-offset: 2px;
+}
+
 /* Footer & more info */
 .more-info {
   max-width: var(--max-width);
@@ -633,6 +694,61 @@ section {
   color: var(--color-text-muted);
   text-align: center;
   padding: 0.5rem;
+}
+
+/* Footer logo strip — dark bg, one row, scroll right-to-left loop */
+.footer-logos {
+  background: #2c2c2c;
+  padding: var(--space-lg) 0;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.footer-logos-track {
+  display: flex;
+  width: max-content;
+  animation: footer-logos-scroll 25s linear infinite;
+}
+
+.footer-logos-row {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 2.5rem;
+  padding: 0 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-logos-row {
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .footer-logo {
+    height: 44px;
+    max-width: 110px;
+  }
+}
+
+@keyframes footer-logos-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.footer-logo:hover {
+  opacity: 1;
 }
 
 .e-leaflet-footer {
