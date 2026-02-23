@@ -33,13 +33,16 @@ E-leaflet_FireCheck4D/
 │   └── firecheck4d_translate.js      # 多語翻譯檔（EN/FR）
 └── assets/                            # 靜態資源
     ├── images/                        # 圖片（可放置攤位背板、產品圖等）
+    ├── videos/                        # 影片（MP4，用於 hero、各區塊關鍵視覺）
+    │   ├── start_video.mp4                      # 進入頁面時 hero 區關鍵視覺背景
+    │   ├── Evacuation sequence analysis.mp4    # 疏散序列分析區關鍵影片
+    │   ├── Travel distance assessment.mp4      # 行走距離評估區關鍵影片
+    │   ├── Fire resisting construction.mp4     # 耐火構造區關鍵影片
+    │   ├── automated vetting.mp4               # From Data to Compliance 區
+    │   ├── Codify regulatory requirements in various natural languages.mp4  # Global Adoption 區
+    │   ├── Fire rated material traceability.mp4
+    │   └── Alterations and additions.mp4
     └── gifs/                          # GIF 動圖（用於展示工具操作等）
-        ├── start_video.mp4                      # 進入頁面時 hero 區關鍵視覺背景
-        ├── Evacuation sequence analysis.mp4    # 疏散序列分析區關鍵影片
-        ├── Travel distance assessment.mp4      # 行走距離評估區關鍵影片
-        ├── Fire resisting construction.mp4     # 耐火構造區關鍵影片
-        ├── automated vetting.mp4               # From Data to Compliance 區
-        ├── Codify regulatory requirements in various natural languages.mp4  # Global Adoption 區
         └── travel_distance_*.gif               # Travel distance 三張 GIF 展示
 ```
 
@@ -95,10 +98,10 @@ CSS 變數：`--color-accent`、`--color-accent-secondary`（見 `css/style.css`
 
 1. **更新文字**: 直接編輯 `index_geneva_firecheck4d.html` 內對應的 `<section>` 或段落，**同時在 `firecheck4d_translate.js` 更新 en/fr 翻譯**。保持結構與 class 名稱以利樣式一致。
 2. **更新樣式**: 僅修改 `css/style.css`，避免在 HTML 內寫大量 inline style。主題色見上方「主題色 (Theme Colours — Panel)」及 `:root`。
-3. **新增圖片 / GIF**:  
-   - 圖片放入 `assets/images/`，GIF 放入 `assets/gifs/`。  
-   - 在 HTML 中用相對路徑引用，例如 `assets/images/xxx.png`、`assets/gifs/xxx.gif`。  
-   - 目前 HTML 內有「媒體區塊」placeholder（`class="media-block"`），可將其中的 `<span>…</span>` 改為 `<img src="assets/images/xxx.png" alt="…">` 或 `<img src="assets/gifs/xxx.gif" alt="…">`。
+3. **新增圖片 / GIF / 影片**:  
+   - 圖片放入 `assets/images/`，GIF 放入 `assets/gifs/`，影片（MP4）放入 `assets/videos/`。  
+   - 在 HTML 中用相對路徑引用，例如 `assets/images/xxx.png`、`assets/gifs/xxx.gif`、`assets/videos/xxx.mp4`。  
+   - 目前 HTML 內有「媒體區塊」placeholder（`class="media-block"`），可將其中的 `<span>…</span>` 改為 `<img src="assets/images/xxx.png" alt="…">`、`<img src="assets/gifs/xxx.gif" alt="…">` 或 `<video src="assets/videos/xxx.mp4" …></video>`。
 4. **新增區塊**: 複製現有 `<section class="...">` 結構，依序貼上並修改標題與內文，必要時在 `style.css` 增加對應 class。
 5. **多語**: 已實作 EN/FR 切換。新增任何文字內容時，必須在 `firecheck4d_translate.js` 加入對應翻譯，並在 HTML 加上 `data-i18n` 或 `data-i18n-html`。
 6. **部署**: 將整個資料夾內容上傳至 `building-information-modelling/` 路徑下，確保 `index_geneva_firecheck4d.html` 可透過上述 URL 存取。
