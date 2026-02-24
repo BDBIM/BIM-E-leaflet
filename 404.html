@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - BIM-E-leaflet</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #0a1628;
+      --paper: #f5f0e8;
+      --grid: #7eb8da;
+      --grid-dim: rgba(126, 184, 218, 0.35);
+      --accent: #c45c3e;
+      --steel: #4a5568;
+    }
+    html { height: 100%; }
+    body {
+      min-height: 100%;
+      font-family: 'Consolas', 'Monaco', 'Ubuntu Mono', monospace;
+      background: var(--paper);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Blueprint-style background grid */
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--grid-dim) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-dim) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    /* Corner framing like a technical drawing */
+    body::after {
+      content: '';
+      position: absolute;
+      inset: 1.5rem;
+      border: 2px solid var(--grid-dim);
+      pointer-events: none;
+    }
+    .container { position: relative; z-index: 1; text-align: center; max-width: 42rem; }
+    .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--steel);
+      margin-bottom: 0.5rem;
+    }
+    .code {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(6rem, 18vw, 10rem);
+      font-weight: 400;
+      line-height: 0.9;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      text-shadow: 2px 2px 0 var(--grid-dim);
+    }
+    .code .digit { display: inline-block; animation: settle 0.6s ease-out backwards; }
+    .code .digit:nth-child(1) { animation-delay: 0.1s; }
+    .code .digit:nth-child(2) { animation-delay: 0.2s; }
+    .code .digit:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes settle {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .message {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--steel);
+      margin-top: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .caption {
+      font-size: 0.85rem;
+      color: var(--steel);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 12rem;
+      padding: 0.6rem 1.4rem;
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      text-decoration: none;
+      border: 2px solid;
+      transition: color 0.2s, background 0.2s, border-color 0.2s;
+    }
+    .link-fire {
+      color: rgb(235, 75, 155);
+      background: linear-gradient(135deg, #1a0a0a 0%, #2d1515 50%, #1a0a0a 100%);
+      border-color: rgb(235, 75, 155);
+      box-shadow: inset 0 0 12px rgba(235, 75, 155, 0.2), 0 0 8px rgba(255, 100, 80, 0.15);
+    }
+    .link-fire:hover { background: rgba(235, 75, 155, 0.12); color: rgb(200, 55, 125); }
+    .link-urban {
+      color: #7ec8e3;
+      background: linear-gradient(135deg, #0a1828 0%, #0d2840 50%, #0a1828 100%);
+      border-color: #7ec8e3;
+      box-shadow: inset 0 0 12px rgba(126, 200, 227, 0.15), 0 0 8px rgba(100, 180, 220, 0.1);
+    }
+    .link-urban:hover { background: rgba(126, 200, 227, 0.1); color: #00aeff; }
+    /* Adjacent high-rise buildings */
+    .skyline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: linear-gradient(to top, var(--ink) 0%, transparent 100%);
+      opacity: 0.2;
+      clip-path: polygon(
+        0% 100%, 
+        0% 75%, 8% 75%, 8% 100%,               /* Building 1 */
+        
+        /* Building 2 (HK Space Museum - Bigger & Wider Dome) */
+        8% 75%, 
+        8.5% 65%, 10% 55%, 12.5% 48%, 14% 45.5%, 
+        15% 45%,                               /* New Peak (Taller & Centered) */
+        16% 45.5%, 17.5% 48%, 20% 55%, 21.5% 65%, 
+        22% 75%, 
+        22% 100%, 
+
+        /* Shifting subsequent buildings to the right to make room */
+        22% 75%, 30% 75%, 30% 100%,            /* Building 3 (Shifted) */
+        30% 65%, 37% 65%, 37% 100%,            /* Building 4 (Shifted) */
+        37% 45%, 39% 40%, 41% 10%, 43% 40%, 45% 45%, 45% 100%, /* Building 5 (Spire - Shifted) */
+        45% 70%, 55% 70%, 55% 100%,            /* Building 6 (Shifted) */
+        55% 70%, 63% 70%, 63% 100%,            /* Building 7 (Shifted) */
+        
+        63% 60%, 70% 60%,                      /* Top of Building 8 */
+        70% 63%, 80% 63%,                      /* [Bridge Top] Cross to B10 */
+        80% 50%, 87% 50%, 87% 100%,            /* Top of Building 10 */
+        80% 100%,                              /* Return to Ground */
+        80% 68%, 70% 68%,                      /* [Bottom of Bridge] */
+        70% 100%,                              /* Return to Ground */
+        70% 90%, 80% 90%,                      /* Building 9 (Under Bridge) */
+        80% 100%,                              /* Return to Ground */
+
+        87% 100%, 87% 75%, 89% 75%, 89% 15%, 91% 0%, 91% 40%, 92% 55%, 92% 75%, 95% 75%, 95% 100%,  /* Building 11 */
+        95% 90%, 100% 90%, 100% 100%           /* Building 12 */
+      );
+
+    }
+    /* Slightly smaller fonts in horizontal/landscape view */
+    @media (orientation: landscape) {
+      .label { font-size: 0.6rem; }
+      .code { font-size: clamp(4rem, 12vw, 7rem); }
+      .message { font-size: 1.25rem; }
+      .caption { font-size: 0.75rem; margin-bottom: 1.5rem; }
+      .link { font-size: 0.7rem; min-width: 10rem; padding: 0.5rem 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="skyline" aria-hidden="true"></div>
+  <div class="container">
+    <p class="label">Error Reference</p>
+    <h1 class="code" aria-label="404">
+      <span class="digit">4</span><span class="digit">0</span><span class="digit">4</span>
+    </h1>
+    <p class="message">Page not found</p>
+    <p class="caption">
+      Sorry, we cannot find the page you are looking for.<br>
+      Please return the link below to continue.
+    </p>
+    <div class="links">
+      <a href="index_geneva_firecheck4d.html" class="link link-fire">FireCheck 4D</a>
+      <a href="index_geneva_urbancooldynamics.html" class="link link-urban">UrbanCool Dynamics</a>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var links = document.querySelectorAll('.link');
+      links.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var href = link.getAttribute('href');
+          document.body.style.opacity = '0';
+          document.body.style.transition = 'opacity 0.3s ease';
+          setTimeout(function() { window.location.href = href; }, 280);
+        });
+      });
+    });
+  </script>
+
+
+</body></html>
