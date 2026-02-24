@@ -1,0 +1,295 @@
+/* UrbanCool Dynamics E-leaflet — Panel theme colours #1a1a1a (black), #cf5552, #58a38e */
+
+@import url('style.css');
+
+:root {
+  /* UrbanCool panel theme colours */
+  --color-accent: #cf5552;
+  --color-accent-dark: #b84845;
+  --color-accent-secondary: #58a38e;
+  --color-accent-secondary-dark: #4a8b77;
+  --color-urbancool-dark: #1a1a1a;
+  --color-urbancool-green: #58a38e;
+  --color-urbancool-red: #cf5552;
+  --color-section-alt: #e8f5f1;
+}
+
+/* UrbanCool header — dark theme */
+.urbancool-header {
+  background: var(--color-urbancool-dark);
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+.urbancool-page .brand {
+  color: var(--color-accent-secondary);
+}
+
+.urbancool-page .nav-links a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.urbancool-page .nav-links a:hover {
+  color: var(--color-accent-secondary);
+}
+
+.urbancool-page .lang-btn {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.urbancool-page .lang-btn:hover,
+.urbancool-page .lang-btn.active {
+  color: var(--color-accent-secondary);
+}
+
+.urbancool-page .nav-toggle-bar {
+  background: #fff;
+}
+
+/* Hero — full-width panel image background */
+.urbancool-hero .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.urbancool-hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 26, 26, 0.5) 0%,
+    rgba(26, 26, 26, 0.3) 50%,
+    rgba(26, 26, 26, 0.6) 100%
+  );
+}
+
+.urbancool-hero-inner .hero-title {
+  letter-spacing: 0.08em;
+}
+
+.urbancool-hero .hero-badge {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--color-accent-secondary);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Dark sections — panel left side */
+.section-dark {
+  background: var(--color-urbancool-dark);
+  color: #fff;
+  padding: var(--space-lg) var(--space-unit);
+  max-width: none;
+}
+
+.section-dark .section-tag {
+  color: var(--color-accent-secondary);
+}
+
+.section-title-light {
+  color: #fff !important;
+}
+
+.section-lead-light {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.urbancool-stats {
+  margin-top: 1.5rem;
+}
+
+.stat-card-dark {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.stat-card-dark .stat-value {
+  color: var(--color-accent-secondary);
+}
+
+.stat-label-light {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Green band — panel top right */
+.urbancool-band {
+  padding: 1.25rem var(--space-unit);
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.urbancool-band.urbancool-band-green {
+  background: var(--color-urbancool-green);
+}
+
+.urbancool-band.urbancool-band-red {
+  background: var(--color-urbancool-red);
+}
+
+/* Section green — panel top right area */
+.section-green {
+  background: linear-gradient(180deg, var(--color-urbancool-green) 0%, #6bb89e 100%);
+  color: #fff;
+  padding: var(--space-lg) var(--space-unit);
+  max-width: none;
+}
+
+.section-tag-light {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.section-title-on-color {
+  color: #fff !important;
+}
+
+.section-lead-on-color {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Insights grid */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-unit);
+  margin-top: 1.5rem;
+}
+
+.insight-card {
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-fillet);
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.insight-icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.insight-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Formula box */
+.formula-box {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border: 3px solid var(--color-urbancool-red);
+  border-radius: var(--radius-fillet);
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.formula-box p {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Consolas", "Monaco", monospace;
+}
+
+/* Red band — panel bottom right */
+.urbancool-band.urbancool-band-red {
+  background: var(--color-urbancool-red);
+}
+
+/* Section red — panel bottom right area */
+.section-red {
+  background: linear-gradient(180deg, var(--color-urbancool-red) 0%, #d96a68 100%);
+  color: #fff;
+  padding: var(--space-lg) var(--space-unit);
+  max-width: none;
+}
+
+/* Design workflow cards */
+.design-workflow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-lg);
+  margin-top: 1.5rem;
+}
+
+.workflow-card {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-fillet);
+  backdrop-filter: blur(4px);
+}
+
+.workflow-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+}
+
+.workflow-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.validation-box {
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius-fillet);
+  border-left: 4px solid #fff;
+}
+
+.validation-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+/* More info & footer */
+.urbancool-more-info {
+  border-top-color: var(--color-border);
+}
+
+.urbancool-qr {
+  border-color: var(--color-accent-secondary);
+}
+
+.urbancool-footer-logos {
+  background: var(--color-urbancool-dark);
+}
+
+.urbancool-footer {
+  background: var(--color-urbancool-dark);
+  color: rgba(255, 255, 255, 0.8);
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+.urbancool-footer a {
+  color: var(--color-accent-secondary);
+}
+
+/* Sidebar — dark theme */
+.urbancool-sidebar {
+  background: rgba(26, 26, 26, 0.98);
+}
+
+.urbancool-sidebar .nav-sidebar-links a:hover {
+  color: var(--color-accent-secondary);
+}
+
+.urbancool-sidebar .nav-sidebar-lang .lang-btn:hover,
+.urbancool-sidebar .nav-sidebar-lang .lang-btn.active {
+  color: var(--color-accent-secondary);
+}
+
