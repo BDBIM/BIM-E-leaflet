@@ -20,9 +20,9 @@
 - **產品名稱**: UrbanCool Dynamics  
 - **產品類型**: A BIM Building Permeability Checker  
 - **活動**: Geneva Invention  
-- **入口檔**: `index_geneva_UrbanCoolDynamics.html`  
-- **託管路徑**: `https://www.bd.gov.hk/en/resources/online-tools/building-information-modelling/index_geneva_UrbanCoolDynamics.html`
-- **開發預覽（GitHub Pages）**: [index_geneva_UrbanCoolDynamics.html](https://bdbim.github.io/BIM-E-leaflet/index_geneva_UrbanCoolDynamics.html)
+- **入口檔**: `index_geneva_urbancooldynamics.html`  
+- **託管路徑**: `https://www.bd.gov.hk/en/resources/online-tools/building-information-modelling/index_geneva_urbancooldynamics.html`
+- **開發預覽（GitHub Pages）**: [index_geneva_urbancooldynamics.html](https://bdbim.github.io/BIM-E-leaflet/index_geneva_urbancooldynamics.html)
 - **主題色**: 黑 (#1a1a1a)、#cf5552、#58a38e  
 - **背景面板**: 請將攤位背板圖片放置於 `assets/images/UrbanCool_panel.png`
 
@@ -34,7 +34,7 @@
 - **技術棧**: 純靜態 HTML + CSS + JavaScript，無需伺服器端或建置工具。
 - **入口檔**: 
   - FireCheck 4D: `index_geneva_firecheck4d.html`
-  - UrbanCool Dynamics: `index_geneva_UrbanCoolDynamics.html`
+  - UrbanCool Dynamics: `index_geneva_urbancooldynamics.html`
 - **相容性**: 僅依賴標準 HTML5/CSS3，可在各現代瀏覽器直接開啟。
 
 ---
@@ -45,7 +45,7 @@
 BIM-E-leaflet/
 ├── README.md                              # 本說明檔（專案資訊與後續維護指引）
 ├── index_geneva_firecheck4d.html          # FireCheck 4D 電子傳單主頁
-├── index_geneva_UrbanCoolDynamics.html    # UrbanCool Dynamics 電子傳單主頁
+├── index_geneva_urbancooldynamics.html    # UrbanCool Dynamics 電子傳單主頁
 ├── css/
 │   ├── style.css                         # 主樣式表（FireCheck 4D + 共用）
 │   └── urbancool_style.css               # UrbanCool Dynamics 樣式覆蓋
@@ -142,7 +142,7 @@ CSS 變數：`css/urbancool_style.css`（`--color-urbancool-dark`, `--color-urba
 > - FireCheck 4D：在 `js/firecheck4d_translate.js` 新增翻譯；UrbanCool Dynamics：在 `js/urbancool_translate.js` 新增翻譯。  
 > - 語言切換器位於導覽列（EN | FR），選擇會儲存於 localStorage。
 
-1. **更新文字**: 編輯對應專案的 HTML（`index_geneva_firecheck4d.html` 或 `index_geneva_UrbanCoolDynamics.html`），**同時在對應的 translate.js 更新 en/fr 翻譯**。保持結構與 class 名稱以利樣式一致。
+1. **更新文字**: 編輯對應專案的 HTML（`index_geneva_firecheck4d.html` 或 `index_geneva_urbancooldynamics.html`），**同時在對應的 translate.js 更新 en/fr 翻譯**。保持結構與 class 名稱以利樣式一致。
 2. **更新樣式**: FireCheck 4D 修改 `css/style.css`；UrbanCool Dynamics 修改 `css/urbancool_style.css`。主題色見上方「主題色」。
 3. **新增圖片 / GIF / 影片**:  
    - 圖片放入 `assets/images/`，GIF 放入 `assets/gifs/`，影片（MP4）放入 `assets/videos/`。  
@@ -150,7 +150,7 @@ CSS 變數：`css/urbancool_style.css`（`--color-urbancool-dark`, `--color-urba
    - 目前 HTML 內有「媒體區塊」placeholder（`class="media-block"`），可將其中的 `<span>…</span>` 改為 `<img src="assets/images/xxx.png" alt="…">`、`<img src="assets/gifs/xxx.gif" alt="…">` 或 `<video src="assets/videos/xxx.mp4" …></video>`。
 4. **新增區塊**: 複製現有 `<section class="...">` 結構，依序貼上並修改標題與內文，必要時在 `style.css` 增加對應 class。
 5. **多語**: 已實作 EN/FR 切換。新增任何文字內容時，必須在對應專案的 translate.js 加入翻譯，並在 HTML 加上 `data-i18n` 或 `data-i18n-html`。
-6. **部署**: 將整個資料夾內容上傳至 `building-information-modelling/` 路徑下，確保 `index_geneva_firecheck4d.html` 與 `index_geneva_UrbanCoolDynamics.html` 皆可透過上述 URL 存取。
+6. **部署**: 將整個資料夾內容上傳至 `building-information-modelling/` 路徑下，確保 `index_geneva_firecheck4d.html` 與 `index_geneva_urbancooldynamics.html` 皆可透過上述 URL 存取。
 7. **連結與 QR Code**: 若「更多資訊」需連到外部連結或 PDF，在 HTML 中更新對應的 `<a href="...">` 及 QR 碼圖片路徑。
 
 ---
