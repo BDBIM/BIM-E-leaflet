@@ -61,9 +61,9 @@
       alterations_title: 'Alterations and additions',
       alterations_lead: 'Simulate impact to ensure continuous statutory compliance — extensions, repartitioning, staircase capacity.',
       game_tag: 'Try it',
-      game_title: 'Play our Fire Safely game',
+      game_title: 'Play our Fire Safety game',
       game_lead: 'Experience our fire safety concepts in an interactive way. Click below to open the online game in a new tab.',
-      game_btn: 'Play Fire Safely Game →',
+      game_btn: 'Play Fire Safety Game →',
       more_info: 'More Information / Plus d\'informations',
       footer_main: 'FireCheck 4D — A BIM Fire Safety Checker. Buildings Department · Tsinghua University · VIRCON.',
       footer_hosted: 'Hosted at'
@@ -123,9 +123,9 @@
       alterations_title: 'Modifications et ajouts',
       alterations_lead: 'Simuler l\'impact pour assurer une conformité réglementaire continue — extensions, repartition, capacité des escaliers.',
       game_tag: 'Essayez',
-      game_title: 'Jouez à notre jeu Fire Safely',
+      game_title: 'Jouez à notre jeu Fire Safety',
       game_lead: 'Découvrez nos concepts de sécurité incendie de manière interactive. Cliquez ci-dessous pour ouvrir le jeu en ligne dans un nouvel onglet.',
-      game_btn: 'Jouer au jeu Fire Safely →',
+      game_btn: 'Jouer au jeu Fire Safety →',
       more_info: 'Plus d\'informations / More Information',
       footer_main: 'FireCheck 4D — Un vérificateur de sécurité incendie BIM. Buildings Department · Tsinghua University · VIRCON.',
       footer_hosted: 'Hébergé sur'
