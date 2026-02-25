@@ -269,6 +269,12 @@
   background: var(--color-urbancool-dark);
 }
 
+.urbancool-footer-logos .footer-logo.footer-logo-lg {
+  width: 300px;
+  height: 100px;
+  object-fit: contain;
+}
+
 .urbancool-footer {
   background: var(--color-urbancool-dark);
   color: rgba(255, 255, 255, 0.8);

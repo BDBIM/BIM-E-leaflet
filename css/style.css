@@ -452,6 +452,27 @@ section {
   background: var(--color-section-alt);
 }
 
+/* Achievements list */
+.achievements-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+.achievement-item {
+  margin: 0;
+}
+.achievement-awards {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text);
+}
+.achievement-meta {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.25rem 0;
+}
+
 /* Two-column content */
 .two-col {
   display: grid;
@@ -580,6 +601,17 @@ section {
   width: 100%;
 }
 
+.media-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  width: 100%;
+  background: var(--color-section-alt);
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
 /* Media row: multiple images/GIFs in a row */
 .media-row {
   display: grid;
@@ -677,6 +709,16 @@ section {
   gap: var(--space-unit);
 }
 
+.more-info-inner {
+  flex: 1;
+  min-width: 0;
+}
+.more-info-inner .section-tag {
+  margin-top: 1rem;
+}
+.more-info-game-cta {
+  margin: 1rem 0 0 0;
+}
 .more-info-text {
   font-size: 1rem;
   font-weight: 600;
