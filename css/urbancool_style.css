@@ -14,8 +14,14 @@
   --color-section-alt: #e8f5f1;
 }
 
-/* UrbanCool header — dark theme */
+/* UrbanCool page — dark body to avoid white edges */
+.urbancool-page {
+  background: var(--color-urbancool-dark);
+}
+
+/* UrbanCool header — dark theme, full width */
 .urbancool-header {
+  width: 100%;
   background: var(--color-urbancool-dark);
   border-bottom-color: rgba(255, 255, 255, 0.15);
 }
@@ -78,16 +84,94 @@
   letter-spacing: 0.05em;
 }
 
-/* Dark sections — panel left side */
-.section-dark {
+/* Dark sections — full-width background, content centered (override base section max-width) */
+.urbancool-page .section-dark {
   background: var(--color-urbancool-dark);
   color: #fff;
   padding: var(--space-lg) var(--space-unit);
-  max-width: none;
+  width: 100%;
+  max-width: none !important;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section-dark > * {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-dark .section-tag {
   color: var(--color-accent-secondary);
+}
+
+/* Pain points — bullet list and image */
+.section-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 1rem auto;
+}
+.section-list-light {
+  color: var(--color-text-on-dark);
+}
+.section-list li {
+  margin-bottom: 0.5rem;
+}
+.section-list li:last-child {
+  margin-bottom: 0;
+}
+.painpoints-media {
+  margin-top: 1.5rem;
+}
+.painpoints-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Climate video — unclickable, autoplay, stops at end */
+#climate .media-block video {
+  pointer-events: none;
+}
+
+/* Cooling section GIF — transparent, no background or border */
+.section-dark .media-block {
+  border: none;
+  background: transparent;
+  min-height: 0;
+}
+
+/* Cooling GIF + label side by side — GIF larger, label smaller */
+.cooling-media-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-unit);
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.cooling-media-wrap .media-block {
+  flex: 1 1 70%;
+  min-width: 280px;
+  margin-top: 0;
+}
+
+.cooling-media-wrap .media-block img {
+  width: 100%;
+}
+
+.cooling-label {
+  flex: 0 0 auto;
+  max-width: 240px;
+  width: 240px;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .cooling-media-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .section-title-light {
@@ -115,7 +199,7 @@
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
-/* Green band — panel top right */
+/* Green/red bands — full width */
 .urbancool-band {
   padding: 1.25rem var(--space-unit);
   color: #fff;
@@ -134,12 +218,27 @@
   background: var(--color-urbancool-red);
 }
 
-/* Section green — panel top right area */
-.section-green {
+/* Section green — full-width background, content centered */
+.urbancool-page .section-green {
   background: linear-gradient(180deg, var(--color-urbancool-green) 0%, #6bb89e 100%);
   color: #fff;
   padding: var(--space-lg) var(--space-unit);
-  max-width: none;
+  width: 100%;
+  max-width: none !important;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section-green > * {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Formula box — left-align with other section content (match centered 1200px block) */
+.section-green .formula-box {
+  margin-left: calc((100% - min(100%, var(--max-width))) / 2);
+  margin-right: auto;
 }
 
 .section-tag-light {
@@ -154,12 +253,42 @@
   color: rgba(255, 255, 255, 0.95) !important;
 }
 
+/* Integration — animation top + cards below on narrow; cards left + animation right on wide */
+.integration-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .integration-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .integration-content .insights-grid {
+    flex: 0 0 200px;
+    grid-template-columns: 1fr;
+    margin-top: 0;
+    order: 1;
+  }
+
+  .integration-content .integration-layers-wrap {
+    flex: 1 1 0;
+    max-width: none;
+    margin: 0;
+    order: 2;
+  }
+}
+
 /* Insights grid */
 .insights-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: var(--space-unit);
-  margin-top: 1.5rem;
+  margin-top: 0;
 }
 
 .insight-card {
@@ -183,13 +312,71 @@
   font-weight: 500;
 }
 
-/* Formula box */
+/* Integration layers — exploded 3D diagram animation */
+.integration-layers-wrap {
+  margin-top: 2rem;
+  border-radius: var(--radius-fillet);
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.integration-layers {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 14;
+}
+
+.integration-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: hard-light;
+}
+
+.layer-1 { animation: layer-expand-1 8s ease-in-out infinite; }
+.layer-2 { animation: layer-expand-2 8s ease-in-out infinite; }
+.layer-3 { animation: layer-expand-3 8s ease-in-out infinite; }
+.layer-4 { animation: layer-expand-4 8s ease-in-out infinite; }
+.layer-5 { animation: layer-expand-5 8s ease-in-out infinite; }
+
+@keyframes layer-expand-1 {
+  0%, 15%, 85%, 100% { transform: translateY(0); }
+  35%, 65% { transform: translateY(28%); }
+}
+
+@keyframes layer-expand-2 {
+  0%, 15%, 85%, 100% { transform: translateY(0); }
+  35%, 65% { transform: translateY(16%); }
+}
+
+@keyframes layer-expand-3 {
+  0%, 15%, 85%, 100% { transform: translateY(0); }
+  35%, 65% { transform: translateY(0%); }
+}
+
+@keyframes layer-expand-4 {
+  0%, 15%, 85%, 100% { transform: translateY(0); }
+  35%, 65% { transform: translateY(-16%); }
+}
+
+@keyframes layer-expand-5 {
+  0%, 15%, 85%, 100% { transform: translateY(0); }
+  35%, 65% { transform: translateY(-28%); }
+}
+
+/* Formula box — block with fit-content to align left with other section content */
 .formula-box {
   margin: 1.5rem 0;
   padding: 1rem 1.5rem;
   border: 3px solid var(--color-urbancool-red);
   border-radius: var(--radius-fillet);
-  display: inline-block;
+  display: block;
+  width: fit-content;
   background: rgba(255, 255, 255, 0.15);
 }
 
@@ -206,12 +393,21 @@
   background: var(--color-urbancool-red);
 }
 
-/* Section red — panel bottom right area */
-.section-red {
+/* Section red — full-width background, content centered */
+.urbancool-page .section-red {
   background: linear-gradient(180deg, var(--color-urbancool-red) 0%, #d96a68 100%);
   color: #fff;
   padding: var(--space-lg) var(--space-unit);
-  max-width: none;
+  width: 100%;
+  max-width: none !important;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section-red > * {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Design workflow cards */
@@ -242,6 +438,19 @@
   color: rgba(255, 255, 255, 0.95);
 }
 
+/* Design GIF — remove white background via multiply blend mode */
+.design-gif {
+  background: transparent;
+  border: none;
+  min-height: 0;
+}
+
+.design-gif img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .validation-box {
   margin-top: 1.5rem;
   padding: 1rem 1.5rem;
@@ -256,9 +465,134 @@
   color: #fff;
 }
 
-/* More info & footer */
+/* Recognition and Impacts section — align with section-tag, section-title, sdg-grid */
+#recognition .section-lead,
+#recognition .recognition-headline {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recognition-headline {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.climate-subtitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-unit);
+  margin-top: 1.5rem;
+  align-items: stretch;
+}
+
+@media (max-width: 640px) {
+  .sdg-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sdg-card {
+  padding: 1.25rem;
+  border-radius: var(--radius-fillet);
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.sdg-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  opacity: 0.95;
+}
+
+.sdg-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+}
+
+.sdg-desc {
+  font-size: 0.85rem;
+  margin: 0;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  opacity: 0.9;
+}
+
+.sdg-3 {
+  background: linear-gradient(135deg, #4c9f38 0%, #5cb84a 100%);
+}
+
+.sdg-11 {
+  background: linear-gradient(135deg, #fd9d24 0%, #fdb833 100%);
+}
+
+.sdg-13 {
+  background: linear-gradient(135deg, #3f7e44 0%, #4a9d50 100%);
+}
+
+.recognition-media {
+  margin-top: 2rem;
+}
+
+.recognition-media .media-block {
+  min-height: 200px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.recognition-media .media-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.recognition-media .media-placeholder {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  padding: var(--space-unit);
+  text-align: center;
+}
+
+/* More info & footer — full-width background */
 .urbancool-more-info {
   border-top-color: var(--color-border);
+  width: 100%;
+  max-width: none !important;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.urbancool-footer-logos {
+  width: 100%;
+}
+
+.urbancool-footer {
+  width: 100%;
 }
 
 .urbancool-qr {

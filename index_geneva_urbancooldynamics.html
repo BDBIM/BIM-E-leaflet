@@ -15,11 +15,14 @@
         <nav class="nav-desktop">
           <ul class="nav-links">
             <li><a href="#hero" data-i18n="nav_hero">Overview</a></li>
-            <li><a href="#climate" data-i18n="nav_climate">Climate</a></li>
-            <li><a href="#cooling" data-i18n="nav_cooling">Multi-Scale Cooling</a></li>
+            <li><a href="#about" data-i18n="nav_about">About</a></li>
+            <li><a href="#painpoints" data-i18n="nav_painpoints">Pain points</a></li>
+            <!-- <li><a href="#climate" data-i18n="nav_climate">Climate</a></li>
+            <li><a href="#cooling" data-i18n="nav_cooling">Multi-Scale Cooling</a></li> -->
             <li><a href="#integration" data-i18n="nav_integration">Integration</a></li>
             <li><a href="#science" data-i18n="nav_science">Scientific Robustness</a></li>
             <li><a href="#design" data-i18n="nav_design">Design Review</a></li>
+            <li><a href="#recognition" data-i18n="nav_recognition">Recognition</a></li>
             <li><a href="#more-info" data-i18n="nav_more_info">More Information</a></li>
           </ul>
         </nav>
@@ -42,11 +45,14 @@
     <button type="button" class="nav-sidebar-close" aria-label="Close menu">&times;</button>
     <ul class="nav-sidebar-links">
       <li><a href="#hero" data-i18n="nav_hero">Overview</a></li>
-      <li><a href="#climate" data-i18n="nav_climate">Climate</a></li>
-      <li><a href="#cooling" data-i18n="nav_cooling">Multi-Scale Cooling</a></li>
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#painpoints" data-i18n="nav_painpoints">Pain points</a></li>
+      <!-- <li><a href="#climate" data-i18n="nav_climate">Climate</a></li> -->
+      <!-- <li><a href="#cooling" data-i18n="nav_cooling">Multi-Scale Cooling</a></li> -->
       <li><a href="#integration" data-i18n="nav_integration">Integration</a></li>
       <li><a href="#science" data-i18n="nav_science">Scientific Robustness</a></li>
       <li><a href="#design" data-i18n="nav_design">Design Review</a></li>
+      <li><a href="#recognition" data-i18n="nav_recognition">Recognition</a></li>
       <li><a href="#more-info" data-i18n="nav_more_info">More Information</a></li>
     </ul>
     <div class="nav-sidebar-lang">
@@ -59,7 +65,7 @@
   <main>
     <section id="hero" class="hero urbancool-hero" aria-label="Key highlight">
       <div class="hero-bg">
-        <img src="assets/images/UrbanCool_panel.png" alt="" role="presentation">
+        <video src="assets/videos/urbancool_hero.mp4" autoplay loop playsinline muted preload="auto" role="presentation"></video>
       </div>
       <div class="hero-overlay urbancool-hero-overlay"></div>
       <div class="hero-inner urbancool-hero-inner">
@@ -91,10 +97,16 @@
       </div>
     </div>
 
+    <section id="about" class="section-dark">
+      <p class="section-tag" data-i18n="about_tag">About</p>
+      <h2 class="section-title section-title-light">UrbanCool Dynamics</h2>
+      <p class="section-lead section-lead-light" data-i18n="about_lead">An openBIM Permeability Checker — fuses fluid dynamics with openBIM technology to enhance building design for optimal airflow, enabling fast and user-friendly assessments that improve performance and resilience of the built environment against urban heat amplified by climate change.</p>
+    </section>
+
     <section id="climate" class="section-dark">
       <p class="section-tag" data-i18n="climate_tag">Climate-response</p>
-      <h2 class="section-title section-title-light" data-i18n="climate_title">Addressing rising temperature crisis</h2>
-      <p class="section-lead section-lead-light" data-i18n="climate_lead">Urban temperatures are rising faster than global averages. UrbanCool Dynamics helps designers address the heat crisis through data-driven ventilation analysis.</p>
+      <h2 class="section-title section-title-light" data-i18n="climate_title">Imminent Challenge to Urban Liveability</h2>
+      <p class="section-lead section-lead-light" data-i18n="climate_lead">Global cities are facing a growing threat from rising temperatures — increasing at 23% to 103% above the global average. Just five consecutive hot nights can raise mortality rates by up to 7%, while every 1°C increase may drive a 9.2% surge in residential electricity consumption.</p>
       <div class="stats-row urbancool-stats">
         <div class="stat-card stat-card-dark">
           <p class="stat-value" data-i18n="stat_trend">+23 to 103%</p>
@@ -105,43 +117,36 @@
           <p class="stat-label stat-label-light" data-i18n="stat_heatwave_label">Dangerous heat wave markers</p>
         </div>
       </div>
+      <figure class="media-block media-block--video climate-video">
+        <video src="assets/videos/Climate-response-chart.mp4" autoplay playsinline muted preload="auto" aria-label="Climate response chart"></video>
+      </figure>
+    </section>
+
+    <section id="painpoints" class="section-dark">
+      <p class="section-tag" data-i18n="painpoints_tag">Practitioners' Pain points</p>
+      <h2 class="section-title section-title-light" data-i18n="painpoints_title">Seeking a quick and practical tool that allows design flexibility</h2>
+      <ul class="section-list section-list-light" aria-label="Pain points">
+        <li data-i18n="painpoints_point1">Current practice heavily relies on 2D projection, which may overestimate blockage between buildings and lacks 3D detail.</li>
+        <li data-i18n="painpoints_point2">Although 3D Computational Fluid Dynamics (CFD) offers an alternative, its simulation and analysis are time-consuming, leading to missing the golden period for testing design options.</li>
+      </ul>
+      <figure class="media-block media-block--video painpoints-media">
+        <video src="assets/videos/RH_lateral_CUHK.mp4" autoplay loop playsinline muted preload="auto" aria-label="2D projection vs 3D CFD comparison video"></video>
+      </figure>
     </section>
 
     <section id="cooling" class="section-dark">
       <p class="section-tag" data-i18n="cooling_tag">Multi-Scale Cooling</p>
       <h2 class="section-title section-title-light" data-i18n="cooling_title">Testified in Hong Kong, a high-density city role model</h2>
       <p class="section-lead section-lead-light" data-i18n="cooling_lead">From streetscape to neighbourhood to city scale — assess permeability zones (High, Mid, Low) for optimal airflow and urban cooling.</p>
-    </section>
-
-    <div class="urbancool-band urbancool-band-green" data-i18n="band_integration">Integration with City Spatial Data Infrastructure</div>
-
-    <section id="integration" class="section-green">
-      <p class="section-tag section-tag-light" data-i18n="integration_tag">Intégration / Integration</p>
-      <h2 class="section-title section-title-on-color" data-i18n="integration_title">Integration with City Spatial Data Infrastructure</h2>
-      <p class="section-lead section-lead-on-color" data-i18n="integration_lead">Connect building design with urban context — site-level, street connectivity, urban form, topographical, and adjacent land use insights.</p>
-      <div class="insights-grid">
-        <div class="insight-card">
-          <span class="insight-icon" aria-hidden="true">📍</span>
-          <p data-i18n="insight_site">Site-level insights</p>
-        </div>
-        <div class="insight-card">
-          <span class="insight-icon" aria-hidden="true">🛣</span>
-          <p data-i18n="insight_street">Street connectivity insights</p>
-        </div>
-        <div class="insight-card">
-          <span class="insight-icon" aria-hidden="true">🏙</span>
-          <p data-i18n="insight_urban">Urban form insights</p>
-        </div>
-        <div class="insight-card">
-          <span class="insight-icon" aria-hidden="true">⛰</span>
-          <p data-i18n="insight_topo">Topographical insights</p>
-        </div>
-        <div class="insight-card">
-          <span class="insight-icon" aria-hidden="true">🏗</span>
-          <p data-i18n="insight_adjacent">Adjacent land uses insights</p>
-        </div>
+      <div class="cooling-media-wrap">
+        <figure class="media-block media-block--video">
+          <img src="assets/gifs/From%20streetscape%20to%20neighbourhood%20to%20city%20scale.gif" alt="From streetscape to neighbourhood to city scale — permeability zones" loading="lazy">
+        </figure>
+        <img src="assets/images/From%20streetscape%20to%20neighbourhood%20to%20city%20scale_label.png" alt="Scale labels: streetscape, neighbourhood, city" class="cooling-label" loading="lazy">
       </div>
     </section>
+
+    <div class="urbancool-band urbancool-band-green" data-i18n="band_science">Nature-inspired Equation</div>
 
     <section id="science" class="section-green">
       <p class="section-tag section-tag-light" data-i18n="science_tag">Robustesse Scientifique / Scientific Robustness</p>
@@ -151,6 +156,47 @@
         <p data-i18n="formula_lcp">LCP% = Σ Li / L open space</p>
       </div>
       <p class="section-lead section-lead-on-color" data-i18n="science_physics">Physics to Algorithm — The Least Cost Path, From Skin Friction to Friction Cost, From Form Drag to Turning Cost.</p>
+    </section>
+
+    <div class="urbancool-band urbancool-band-green" data-i18n="band_integration">Integration with City Spatial Data Infrastructure</div>
+
+    <section id="integration" class="section-green">
+      <p class="section-tag section-tag-light" data-i18n="integration_tag">Intégration / Integration</p>
+      <h2 class="section-title section-title-on-color" data-i18n="integration_title">Integration with City Spatial Data Infrastructure</h2>
+      <p class="section-lead section-lead-on-color" data-i18n="integration_lead">Connect building design with urban context — site-level, street connectivity, urban form, topographical, and adjacent land use insights.</p>
+      <div class="integration-content">
+        <div class="integration-layers-wrap">
+          <div class="integration-layers">
+            <img src="assets/images/03_OZP.png" alt="Outline Zoning Plan" class="integration-layer layer-1" loading="lazy">
+            <img src="assets/images/02_Terrain_shade.png" alt="Terrain" class="integration-layer layer-2" loading="lazy">
+            <img src="assets/images/04_Road.png" alt="Road network" class="integration-layer layer-3" loading="lazy">
+            <img src="assets/images/05_Surrounding.png" alt="Surrounding buildings" class="integration-layer layer-4" loading="lazy">
+            <img src="assets/images/06a_building%20and%20site.png" alt="Building and site" class="integration-layer layer-5" loading="lazy">
+          </div>
+        </div>
+        <div class="insights-grid">
+          <div class="insight-card">
+            <span class="insight-icon" aria-hidden="true">📍</span>
+            <p data-i18n="insight_site">Site-level insights</p>
+          </div>
+          <div class="insight-card">
+            <span class="insight-icon" aria-hidden="true">🏙</span>
+            <p data-i18n="insight_urban">Urban form insights</p>
+          </div>
+          <div class="insight-card">
+            <span class="insight-icon" aria-hidden="true">🛣</span>
+            <p data-i18n="insight_street">Street connectivity insights</p>
+          </div>
+          <div class="insight-card">
+            <span class="insight-icon" aria-hidden="true">⛰</span>
+            <p data-i18n="insight_topo">Topographical insights</p>
+          </div>
+          <div class="insight-card">
+            <span class="insight-icon" aria-hidden="true">🏗</span>
+            <p data-i18n="insight_adjacent">Adjacent land uses insights</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div class="urbancool-band urbancool-band-red" data-i18n="band_design">Instant Design Review & Generation</div>
@@ -172,8 +218,42 @@
           <p data-i18n="workflow_site_desc">Auto-generate massing options based on site context, configuration, orientations.</p>
         </article>
       </div>
+      <figure class="media-block media-block--gif design-gif">
+        <img src="assets/gifs/Instant Design Review %26 Generation.gif" alt="Instant Design Review and Generation" loading="lazy">
+      </figure>
       <div class="validation-box">
         <p data-i18n="validation_text">Scientific Validation: LCP method compared with CFD — high agreement (R=0.92 and 0.85).</p>
+      </div>
+    </section>
+
+    <section id="recognition" class="section-dark">
+      <p class="section-tag" data-i18n="recognition_tag">Recognition and Impacts</p>
+      <h2 class="section-title section-title-light" data-i18n="recognition_title">Recognition and Impacts</h2>
+      <h3 class="recognition-headline" data-i18n="recognition_headline">Enable rapid iterations to generate building designs incorporating spatial data, code compliance, and quick permeability analysis.</h3>
+      <p class="section-lead section-lead-light" data-i18n="recognition_lead">UrbanCool Dynamics supports instant design generation at early stages, delivering sustainable value with minimal effort and maximum impact. Through broad industry participation, the tool has gained strong practitioner support.</p>
+      <p class="section-lead section-lead-light" data-i18n="recognition_award">Research published at the 2025 CIB World Building Congress received the Best Paper Award in the category &ldquo;Nature-Based Solutions for Climate Resilience in Buildings and Communities&rdquo;. This recognition highlights the tool&rsquo;s contribution to UN Sustainable Development Goals:</p>
+      <div class="sdg-grid">
+        <div class="sdg-card sdg-3">
+          <span class="sdg-number">3</span>
+          <p class="sdg-title" data-i18n="sdg_3_title">Good Health and Well-being</p>
+          <p class="sdg-desc" data-i18n="sdg_3_desc">Improving air quality for better health</p>
+        </div>
+        <div class="sdg-card sdg-11">
+          <span class="sdg-number">11</span>
+          <p class="sdg-title" data-i18n="sdg_11_title">Sustainable Cities and Communities</p>
+          <p class="sdg-desc" data-i18n="sdg_11_desc">Enhancing liveability in sustainable cities</p>
+        </div>
+        <div class="sdg-card sdg-13">
+          <span class="sdg-number">13</span>
+          <p class="sdg-title" data-i18n="sdg_13_title">Climate Action</p>
+          <p class="sdg-desc" data-i18n="sdg_13_desc">Climate-responsive building design</p>
+        </div>
+      </div>
+      <div class="recognition-media">
+        <figure class="media-block media-block--chart">
+          <img src="assets/images/recognition_impacts_chart.png" alt="Effort/Effect vs Time — Design phases PD, SD, DD, CD, GBP Submission" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="media-placeholder" style="display:none" data-i18n="recognition_chart_placeholder">Effort/Effect vs. Time chart — add assets/images/recognition_impacts_chart.png</div>
+        </figure>
       </div>
     </section>
 
