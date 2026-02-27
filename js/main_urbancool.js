@@ -116,9 +116,33 @@
     });
   }
 
+  // Workflow expand/collapse — images hidden by default, show on click
+  function initWorkflowExpand() {
+    document.querySelectorAll('.workflow-expand-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var controlsId = this.getAttribute('aria-controls');
+        var box = controlsId ? document.getElementById(controlsId) : null;
+        var expandText = this.querySelector('.expand-text');
+        var collapseText = this.querySelector('.collapse-text');
+        if (!box) return;
+        var isExpanded = box.classList.toggle('is-expanded');
+        this.setAttribute('aria-expanded', isExpanded);
+        box.setAttribute('aria-hidden', !isExpanded);
+        if (expandText) expandText.style.display = isExpanded ? 'none' : 'inline';
+        if (collapseText) collapseText.style.display = isExpanded ? 'inline' : 'none';
+      });
+    });
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initNavSidebar);
   } else {
     initNavSidebar();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWorkflowExpand);
+  } else {
+    initWorkflowExpand();
   }
 })();

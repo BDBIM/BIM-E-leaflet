@@ -73,6 +73,11 @@
   letter-spacing: 0.08em;
 }
 
+.hero-highlight {
+  color: var(--color-accent-secondary);
+  font-weight: 800;
+}
+
 .urbancool-hero .hero-badge {
   display: inline-block;
   margin-top: 1rem;
@@ -133,6 +138,37 @@
 /* Climate video — unclickable, autoplay, stops at end */
 #climate .media-block video {
   pointer-events: none;
+}
+
+/* Climate video figure — stack caption above video (override media-block flex row) */
+#climate .climate-video {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Climate chart caption — subtitle and subsubtitle above video, full width */
+.climate-chart-caption {
+  flex-shrink: 0;
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0;
+  text-align: center;
+}
+
+.climate-chart-subtitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.4;
+}
+
+.climate-chart-subsubtitle {
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
 }
 
 /* Cooling section GIF — transparent, no background or border */
@@ -242,6 +278,29 @@
   margin-right: auto;
 }
 
+/* LCP equation image — invert black to white on green background */
+.formula-img {
+  margin: 1.5rem auto;
+  max-width: var(--max-width);
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.formula-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 480px;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 640px) {
+  .formula-img img {
+    max-width: 100%;
+  }
+}
+
 .section-tag-light {
   color: rgba(255, 255, 255, 0.9) !important;
 }
@@ -315,24 +374,31 @@
 
 /* Integration layers — exploded 3D diagram animation */
 .integration-layers-wrap {
-  margin-top: 2rem;
-  border-radius: var(--radius-fillet);
-  overflow: hidden;
   width: 100%;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
+/* padding-bottom trick guarantees height even when all children are position:absolute */
 .integration-layers {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 14;
+  padding-bottom: 90%;  /* height = 90% of width */
+  overflow: visible;
+}
+
+/* spacer div keeps the container from collapsing */
+.integration-layers::after {
+  content: '';
+  display: block;
 }
 
 .integration-layer {
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -437,6 +503,64 @@
   margin: 0;
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.95);
+}
+
+/* Workflow expand button — collapsed by default */
+.workflow-expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-fillet);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.workflow-expand-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Workflow images box — hidden by default, shown when expanded */
+.workflow-images-box {
+  display: none;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.workflow-images-box.is-expanded {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.workflow-images-box--2x2.is-expanded {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.workflow-image-fig {
+  margin: 0;
+}
+
+.workflow-images-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.workflow-images-box figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
 }
 
 /* Design GIF — remove white background via multiply blend mode */

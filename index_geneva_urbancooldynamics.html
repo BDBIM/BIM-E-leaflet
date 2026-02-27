@@ -71,7 +71,7 @@
       <div class="hero-inner urbancool-hero-inner">
         <p class="hero-tag" data-i18n="hero_tag">Geneva Invention — Urban Ventilation</p>
         <h1 class="hero-title">URBANCOOL DYNAMICS</h1>
-        <p class="hero-subtitle" data-i18n="hero_subtitle">Create COOLER & HEALTHIER Cities in NO TIME — Building Ventilation Analysis Revolutionised From Weeks to Minutes.</p>
+        <p class="hero-subtitle" data-i18n-html="hero_subtitle">Create COOLER &amp; HEALTHIER Cities in NO TIME — Building Ventilation Analysis Revolutionised From <span class="hero-highlight">Weeks to Minutes</span>.</p>
         <p class="hero-badge" data-i18n="hero_badge">A BIM Building Permeability Checker</p>
       </div>
     </section>
@@ -101,6 +101,9 @@
       <p class="section-tag" data-i18n="about_tag">About</p>
       <h2 class="section-title section-title-light">UrbanCool Dynamics</h2>
       <p class="section-lead section-lead-light" data-i18n="about_lead">An openBIM Permeability Checker — fuses fluid dynamics with openBIM technology to enhance building design for optimal airflow, enabling fast and user-friendly assessments that improve performance and resilience of the built environment against urban heat amplified by climate change.</p>
+      <figure class="media-block media-block--video about-video">
+        <video src="assets/videos/about.mp4" autoplay loop playsinline muted preload="auto" aria-label="About UrbanCool Dynamics"></video>
+      </figure>
     </section>
 
     <section id="climate" class="section-dark">
@@ -118,6 +121,10 @@
         </div>
       </div>
       <figure class="media-block media-block--video climate-video">
+        <div class="climate-chart-caption">
+          <p class="climate-chart-subtitle" data-i18n="climate_chart_subtitle">Mean Temperature Anomaly for Global Cities</p>
+          <p class="climate-chart-subsubtitle" data-i18n="climate_chart_subsubtitle">Cities' temperatures rise steeper than global average</p>
+        </div>
         <video src="assets/videos/Climate-response-chart.mp4" autoplay playsinline muted preload="auto" aria-label="Climate response chart"></video>
       </figure>
     </section>
@@ -138,6 +145,7 @@
       <p class="section-tag" data-i18n="cooling_tag">Multi-Scale Cooling</p>
       <h2 class="section-title section-title-light" data-i18n="cooling_title">Testified in Hong Kong, a high-density city role model</h2>
       <p class="section-lead section-lead-light" data-i18n="cooling_lead">From streetscape to neighbourhood to city scale — assess permeability zones (High, Mid, Low) for optimal airflow and urban cooling.</p>
+      <p class="section-lead section-lead-light" data-i18n="cooling_lead_ext">Testified in Hong Kong, a high-density city role model (with plot ratio in the order of 10+), enhancing Building Permeability in LOW, MIDDLE &amp; HIGH zones for thermal comfort in Streetscape, Neighbourhood &amp; City scales.</p>
       <div class="cooling-media-wrap">
         <figure class="media-block media-block--video">
           <img src="assets/gifs/From%20streetscape%20to%20neighbourhood%20to%20city%20scale.gif" alt="From streetscape to neighbourhood to city scale — permeability zones" loading="lazy">
@@ -152,9 +160,9 @@
       <p class="section-tag section-tag-light" data-i18n="science_tag">Robustesse Scientifique / Scientific Robustness</p>
       <h2 class="section-title section-title-on-color" data-i18n="science_title">Nature-inspired Equation</h2>
       <p class="section-lead section-lead-on-color" data-i18n="science_lead">A windbreak-derived method to assess blockage porosity. Airflow physics informs friction and turning costs simulation.</p>
-      <div class="formula-box">
-        <p data-i18n="formula_lcp">LCP% = Σ Li / L open space</p>
-      </div>
+      <figure class="formula-img">
+        <img src="assets/images/LCP%20equation_black.png" alt="LCP% = Σ Li / L open space" loading="lazy">
+      </figure>
       <p class="section-lead section-lead-on-color" data-i18n="science_physics">Physics to Algorithm — The Least Cost Path, From Skin Friction to Friction Cost, From Form Drag to Turning Cost.</p>
     </section>
 
@@ -164,6 +172,7 @@
       <p class="section-tag section-tag-light" data-i18n="integration_tag">Intégration / Integration</p>
       <h2 class="section-title section-title-on-color" data-i18n="integration_title">Integration with City Spatial Data Infrastructure</h2>
       <p class="section-lead section-lead-on-color" data-i18n="integration_lead">Connect building design with urban context — site-level, street connectivity, urban form, topographical, and adjacent land use insights.</p>
+      <p class="section-lead section-lead-on-color" data-i18n="integration_lead_ext">Draw site information such as site geometry, streets, urban form, land uses, and topography from an integrated city spatial data infrastructure to dynamically sculpt massing, the public realm, and the microclimate to deliver cool, walkable, and socially vibrant spaces under extreme heat.</p>
       <div class="integration-content">
         <div class="integration-layers-wrap">
           <div class="integration-layers">
@@ -208,14 +217,53 @@
         <article class="workflow-card">
           <h3 data-i18n="workflow_codes">From Codes to Design</h3>
           <p data-i18n="workflow_codes_desc">Ingest regulations, zoning bylaws into machine-readable rules.</p>
+          <button type="button" class="workflow-expand-btn" aria-expanded="false" aria-controls="workflow-images-codes">
+            <span class="expand-text" data-i18n="workflow_expand">Expand</span>
+            <span class="collapse-text" data-i18n="workflow_collapse" style="display:none">Collapse</span>
+          </button>
+          <div class="workflow-images-box workflow-images-box--2x2" id="workflow-images-codes" aria-hidden="true">
+            <img src="assets/images/From%20Codes%20to%20Design_1.png" alt="From Codes to Design 1" loading="lazy">
+            <img src="assets/images/From%20Codes%20to%20Design_2.png" alt="From Codes to Design 2" loading="lazy">
+            <img src="assets/images/From%20Codes%20to%20Design_3.png" alt="From Codes to Design 3" loading="lazy">
+            <img src="assets/images/From%20Codes%20to%20Design_4.png" alt="From Codes to Design 4" loading="lazy">
+          </div>
         </article>
         <article class="workflow-card">
           <h3 data-i18n="workflow_needs">From Needs to Design</h3>
           <p data-i18n="workflow_needs_desc">Translate user needs into spatial and functional blocks for 3D massing.</p>
+          <button type="button" class="workflow-expand-btn" aria-expanded="false" aria-controls="workflow-images-needs">
+            <span class="expand-text" data-i18n="workflow_expand">Expand</span>
+            <span class="collapse-text" data-i18n="workflow_collapse" style="display:none">Collapse</span>
+          </button>
+          <div class="workflow-images-box workflow-images-box--2x2" id="workflow-images-needs" aria-hidden="true">
+            <figure class="workflow-image-fig">
+              <img src="assets/images/Studio.png" alt="Studio" loading="lazy">
+              <figcaption data-i18n="needs_caption_studio">Studio</figcaption>
+            </figure>
+            <figure class="workflow-image-fig">
+              <img src="assets/images/1%20room%20unit.png" alt="1 room unit" loading="lazy">
+              <figcaption data-i18n="needs_caption_1room">1 room unit</figcaption>
+            </figure>
+            <figure class="workflow-image-fig">
+              <img src="assets/images/2%20room%20unit.png" alt="2 room unit" loading="lazy">
+              <figcaption data-i18n="needs_caption_2room">2 room unit</figcaption>
+            </figure>
+            <figure class="workflow-image-fig">
+              <img src="assets/images/3%20room%20unit.png" alt="3 room unit" loading="lazy">
+              <figcaption data-i18n="needs_caption_3room">3 room unit</figcaption>
+            </figure>
+          </div>
         </article>
         <article class="workflow-card">
           <h3 data-i18n="workflow_site">From Site to Design</h3>
           <p data-i18n="workflow_site_desc">Auto-generate massing options based on site context, configuration, orientations.</p>
+          <button type="button" class="workflow-expand-btn" aria-expanded="false" aria-controls="workflow-images-site">
+            <span class="expand-text" data-i18n="workflow_expand">Expand</span>
+            <span class="collapse-text" data-i18n="workflow_collapse" style="display:none">Collapse</span>
+          </button>
+          <div class="workflow-images-box" id="workflow-images-site" aria-hidden="true">
+            <img src="assets/images/From%20Site%20to%20Design.png" alt="From Site to Design" loading="lazy">
+          </div>
         </article>
       </div>
       <figure class="media-block media-block--gif design-gif">
