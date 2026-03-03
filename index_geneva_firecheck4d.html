@@ -14,12 +14,12 @@
       <div class="header-right">
         <nav class="nav-desktop">
           <ul class="nav-links">
-            <li><a href="#benefits" data-i18n="nav_benefits">Benefits</a></li>
-            <li><a href="#compliance" data-i18n="nav_compliance">Data to Compliance</a></li>
+            <li><a href="#about" data-i18n="nav_about">About</a></li>
+            <li><a href="#compliance" data-i18n="nav_compliance">From Data to Compliance</a></li>
+            <li><a href="#capabilities" data-i18n="nav_capabilities">The 3-Certainty</a></li>
             <li><a href="#smart-features" data-i18n="nav_smart_features">Smart Features</a></li>
-            <li><a href="#capabilities" data-i18n="nav_capabilities">3 Certainty</a></li>
-            <li><a href="#game" data-i18n="nav_game">Online Game</a></li>
-            <li><a href="#more-info" data-i18n="nav_more_info">More Information</a></li>
+            <li><a href="#achievements" data-i18n="nav_achievements">Achievements</a></li>
+            <li><a href="#more-info" data-i18n="nav_experience_tool">Experience the Tool</a></li>
           </ul>
         </nav>
         <div class="lang-switcher">
@@ -41,12 +41,12 @@
   <aside class="nav-sidebar" id="nav-sidebar" aria-label="Navigation menu">
     <button type="button" class="nav-sidebar-close" aria-label="Close menu">&times;</button>
     <ul class="nav-sidebar-links">
-      <li><a href="#benefits" data-i18n="nav_benefits">Benefits</a></li>
-      <li><a href="#compliance" data-i18n="nav_compliance">Data to Compliance</a></li>
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#compliance" data-i18n="nav_compliance">From Data to Compliance</a></li>
+      <li><a href="#capabilities" data-i18n="nav_capabilities">The 3-Certainty</a></li>
       <li><a href="#smart-features" data-i18n="nav_smart_features">Smart Features</a></li>
-      <li><a href="#capabilities" data-i18n="nav_capabilities">3 Certainty</a></li>
-      <li><a href="#game" data-i18n="nav_game">Online Game</a></li>
-      <li><a href="#more-info" data-i18n="nav_more_info">More Information</a></li>
+      <li><a href="#achievements" data-i18n="nav_achievements">Achievements</a></li>
+      <li><a href="#more-info" data-i18n="nav_experience_tool">Experience the Tool</a></li>
     </ul>
     <div class="nav-sidebar-lang">
       <button type="button" class="lang-btn active" data-lang="en" aria-label="English">EN</button>
@@ -62,12 +62,11 @@
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-inner">
-        <p class="hero-tag" data-i18n="hero_tag">Geneva Invention — BIM Fire Safety</p>
         <h1 class="hero-title">FireCheck 4D</h1>
         <p class="hero-subtitle" data-i18n="hero_subtitle">A BIM Fire Safety Checker — revolutionising the design and regulatory process by BIM automated checking</p>
         <!-- <span class="product-badge" data-i18n="hero_badge">A BIM Fire Safety Checker</span> -->
         <p class="hero-game-cta">
-          <a href="https://bdbim.github.io/FireSafely_BFS_Game/" target="_blank" rel="noopener noreferrer" class="game-cta-btn hero-game-btn" data-i18n="game_btn">Play Fire Safety Game →</a>
+          <a href="https://bdbim.github.io/FireSafely_BFS_Game/" target="_blank" rel="noopener noreferrer" class="game-cta-btn hero-game-btn" data-i18n="game_btn">Experience the Tool →</a>
         </p>
       </div>
     </section>
@@ -84,21 +83,62 @@
     </section>
 
     <section id="benefits" class="section-alt">
-      <p class="section-tag" data-i18n="benefits_tag">Benefits</p>
       <h2 class="section-title" data-i18n="benefits_title">Benefits</h2>
       <p class="section-lead" data-i18n="benefits_lead1">Passive fire design is a critical yet often overlooked aspect of modern construction. The FireCheck 4D significantly reduces human error and enhances productivity and certainty in design, construction as well as adaption and alteration in the whole life span of the building.</p>
       <p class="section-lead" data-i18n="benefits_lead2">Through automating the design and regulatory process, the overall productivity can be increased by 30%. A better fire design and robust management can also help to reduce preventable economic loss and casualties due to fire incidents.</p>
       <div class="stats-row">
-        <div class="stat-card">
+        <div class="stat-card stat-card--trend-up">
+          <svg class="stat-card-chart" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="chart-gradient-up" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="currentColor" stop-opacity="0.08"/>
+                <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path class="stat-card-chart-line" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M 0 42 C 25 42 25 18 50 18 C 75 18 75 8 100 8"/>
+            <path class="stat-card-chart-area" fill="url(#chart-gradient-up)" d="M 0 42 C 25 42 25 18 50 18 C 75 18 75 8 100 8 L 100 50 L 0 50 Z"/>
+          </svg>
           <p class="stat-value" data-count-to="30" data-suffix="%">0%</p>
+          <p class="stat-trend" aria-label="Trend: increase">
+            <span class="stat-trend-icon" aria-hidden="true">↑</span>
+            <span data-i18n="stat_trend_increase">Increase</span>
+          </p>
           <p class="stat-label" data-i18n="stat_productivity">Productivity</p>
         </div>
-        <div class="stat-card">
+        <div class="stat-card stat-card--trend-down">
+          <svg class="stat-card-chart" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="chart-gradient-down-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="currentColor" stop-opacity="0"/>
+                <stop offset="100%" stop-color="currentColor" stop-opacity="0.08"/>
+              </linearGradient>
+            </defs>
+            <path class="stat-card-chart-line" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M 0 8 C 25 8 25 32 50 32 C 75 32 75 42 100 42"/>
+            <path class="stat-card-chart-area" fill="url(#chart-gradient-down-1)" d="M 0 8 C 25 8 25 32 50 32 C 75 32 75 42 100 42 L 100 50 L 0 50 Z"/>
+          </svg>
           <p class="stat-value" data-count-to="18000" data-format="integer">0</p>
+          <p class="stat-trend" aria-label="Trend: decrease">
+            <span class="stat-trend-icon" aria-hidden="true">↓</span>
+            <span data-i18n="stat_trend_decrease">Decrease</span>
+          </p>
           <p class="stat-label" data-i18n="stat_victims">Annual global victims</p>
         </div>
-        <div class="stat-card">
+        <div class="stat-card stat-card--trend-down">
+          <svg class="stat-card-chart" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="chart-gradient-down-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="currentColor" stop-opacity="0"/>
+                <stop offset="100%" stop-color="currentColor" stop-opacity="0.08"/>
+              </linearGradient>
+            </defs>
+            <path class="stat-card-chart-line" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M 0 8 C 25 8 25 32 50 32 C 75 32 75 42 100 42"/>
+            <path class="stat-card-chart-area" fill="url(#chart-gradient-down-2)" d="M 0 8 C 25 8 25 32 50 32 C 75 32 75 42 100 42 L 100 50 L 0 50 Z"/>
+          </svg>
           <p class="stat-value" data-count-to="50" data-suffix="B EUR">0</p>
+          <p class="stat-trend" aria-label="Trend: decrease">
+            <span class="stat-trend-icon" aria-hidden="true">↓</span>
+            <span data-i18n="stat_trend_decrease">Decrease</span>
+          </p>
           <p class="stat-label" data-i18n="stat_loss">Estimated economic loss</p>
         </div>
       </div>
@@ -267,7 +307,7 @@
         <p class="section-tag" data-i18n="experience_tool_tag">EXPERIENCE THE TOOL</p>
         <p class="section-lead" data-i18n="experience_tool_lead">How the FireCheck 4D works? Click the icon below to start a mini game and experience the checking of travel distance.</p>
         <p class="more-info-game-cta">
-          <a href="https://bdbim.github.io/FireSafely_BFS_Game/" target="_blank" rel="noopener noreferrer" class="game-cta-btn" data-i18n="game_btn">Play Fire Safety Game →</a>
+          <a href="https://bdbim.github.io/FireSafely_BFS_Game/" target="_blank" rel="noopener noreferrer" class="game-cta-btn" data-i18n="game_btn">Experience the Tool →</a>
         </p>
       </div>
       <div class="qr-placeholder">QR code<br>(replace with assets/images/qr.png)</div>
