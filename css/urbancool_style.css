@@ -212,8 +212,7 @@
 /* Multi-Scale Cooling subsection inside Our Solution */
 .solutions-cooling {
   margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 0;
 }
 #solutions .solutions-subtitle {
   font-size: clamp(1.5rem, 3vw, 2rem);
