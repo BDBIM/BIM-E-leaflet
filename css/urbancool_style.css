@@ -11,6 +11,7 @@
   --color-urbancool-dark: #1a1a1a;
   --color-urbancool-green: #58a38e;
   --color-urbancool-red: #cf5552;
+  --color-section-tag-on-dark: #6CCBA9;
   --color-section-alt: #e8f5f1;
 }
 
@@ -108,7 +109,15 @@
 }
 
 .section-dark .section-tag {
-  color: var(--color-accent-secondary);
+  color: var(--color-section-tag-on-dark);
+}
+
+/* Reduce gap between Problem (Rising Temperature Crisis) and Early Design Review */
+#climate {
+  padding-bottom: var(--space-unit);
+}
+#painpoints {
+  padding-top: var(--space-unit);
 }
 
 /* Pain points — bullet list and image */
@@ -176,6 +185,20 @@
   border: none;
   background: transparent;
   min-height: 0;
+}
+
+/* Multi-Scale Cooling subsection inside Our Solution */
+.solutions-cooling {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+#solutions .solutions-subtitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  line-height: 1.4;
 }
 
 /* Cooling GIF + label side by side — GIF larger, label smaller */
@@ -313,6 +336,40 @@
   color: rgba(255, 255, 255, 0.95) !important;
 }
 
+/* Science section — subsection titles and content aligned to same column */
+#science .science-subtitle,
+#science .section-lead-on-color,
+#science .media-block,
+#science .formula-img {
+  max-width: var(--max-width);
+  width: 100%;
+  box-sizing: border-box;
+}
+#science .section-lead-on-color {
+  max-width: var(--max-width);
+}
+#science .science-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 2rem 0 0.75rem 0;
+  color: #fff;
+  line-height: 1.4;
+}
+#science .science-subtitle:first-of-type {
+  margin-top: 1rem;
+}
+#science .media-placeholder {
+  display: block;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-fillet);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1rem 0;
+  box-sizing: border-box;
+}
+
 /* Integration — animation top + cards below on narrow; cards left + animation right on wide */
 .integration-content {
   display: flex;
@@ -329,7 +386,7 @@
   }
 
   .integration-content .insights-grid {
-    flex: 0 0 200px;
+    flex: 0 0 320px;
     grid-template-columns: 1fr;
     margin-top: 0;
     order: 1;
@@ -346,7 +403,7 @@
 /* Insights grid */
 .insights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-unit);
   margin-top: 0;
 }
@@ -355,7 +412,7 @@
   padding: 1.25rem;
   background: rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-fillet);
-  text-align: center;
+  text-align: left;
   backdrop-filter: blur(4px);
 }
 
@@ -363,6 +420,23 @@
   font-size: 1.5rem;
   display: block;
   margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.insight-card .insight-title {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.insight-card .insight-desc {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 .insight-card p {
@@ -703,13 +777,53 @@
   text-align: center;
 }
 
+/* Achievements — match UrbanCool dark theme */
+.urbancool-achievements {
+  background: var(--color-urbancool-dark);
+}
+
+.urbancool-achievements .section-tag {
+  color: var(--color-accent);
+}
+
+.urbancool-achievements .achievement-awards {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.urbancool-achievements .achievement-meta {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* More info & footer — full-width background */
 .urbancool-more-info {
-  border-top-color: var(--color-border);
+  border-top-color: rgba(255, 255, 255, 0.15);
   width: 100%;
   max-width: none !important;
   margin-left: 0;
   margin-right: 0;
+  justify-content: center;
+}
+
+.urbancool-more-info .more-info-inner {
+  width: 100%;
+  max-width: var(--max-width);
+  text-align: left;
+}
+
+.urbancool-more-info .more-info-text {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.urbancool-more-info .more-info-links a {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-accent);
+}
+
+.urbancool-more-info .more-info-links a:hover {
+  background: rgba(207, 85, 82, 0.2);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .urbancool-footer-logos {

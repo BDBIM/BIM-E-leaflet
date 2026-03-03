@@ -809,6 +809,46 @@ section {
 .more-info-game-cta {
   margin: 1rem 0 0 0;
 }
+.more-info-links {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.more-info-links li {
+  margin: 0;
+}
+
+.more-info-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-fillet);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.more-info-links a:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: var(--color-accent);
+  text-decoration: none;
+}
+
+.more-info-links a::after {
+  content: "→";
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
 .more-info-text {
   font-size: 1rem;
   font-weight: 600;
