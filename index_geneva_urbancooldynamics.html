@@ -121,6 +121,14 @@
         </div>
         <video src="assets/videos/Climate-response-chart.mp4" autoplay playsinline muted preload="auto" aria-label="Climate response chart"></video>
       </figure>
+      <div class="climate-images-row">
+        <figure class="media-block media-block--video climate-img">
+          <img src="assets/images/new%202.png" alt="Rising temperature crisis" loading="lazy">
+        </figure>
+        <figure class="media-block media-block--video climate-img">
+          <img src="assets/images/new%203.png" alt="Rising temperature crisis" loading="lazy">
+        </figure>
+      </div>
       <p class="section-lead section-lead-light" data-i18n="climate_lead2">Dense clusters of tall buildings trap heat and stall the wind, driving urban temperatures to rise much faster than the global average and exposing millions to dangerous thermal stress. The urban heat island effect compounds global warming, intensifying heatwaves and pushing up energy demand.</p>
     </section>
 
@@ -167,26 +175,44 @@
       <p class="section-tag section-tag-light" data-i18n="science_tag">SCIENTIFIC ROBUSTNESS</p>
       <h2 class="section-title section-title-on-color" data-i18n="science_title">SCIENTIFIC ROBUSTNESS</h2>
 
-      <h3 class="science-subtitle" data-i18n="science_sub1_title">Nature-Inspired — A Windbreak-derived Method</h3>
-      <p class="section-lead section-lead-on-color" data-i18n="science_sub1_lead">Wind slows down due to friction and turning. Inspired by the wind-protection effect of tree windbreaks, we use these two factors to evaluate building permeability.</p>
-      <div class="media-block media-block--video">
-        <span class="media-placeholder" data-i18n="science_media_windbreak">[Diagram: Wind flow and windbreak]</span>
-      </div>
+      <div class="science-content">
+        <h3 class="science-subtitle" data-i18n="science_sub1_title">Nature-Inspired — A Windbreak-derived Method</h3>
+        <p class="section-lead section-lead-on-color" data-i18n="science_sub1_lead">Wind slows down due to friction and turning. Inspired by the wind-protection effect of tree windbreaks, we use these two factors to evaluate building permeability.</p>
+        <figure class="media-block media-block--video">
+          <img src="assets/images/FC%20and%20TC.png" alt="Nature-Inspired — Friction and Turning Cost" loading="lazy">
+        </figure>
 
-      <h3 class="science-subtitle" data-i18n="science_sub2_title">The Least Cost Path — From Physics to Algorithm</h3>
-      <p class="section-lead section-lead-on-color" data-i18n="science_sub2_lead">Our new 3D Least Cost Path (LCP) method evaluates building permeability using two metrics, i.e. Friction Cost which represents airflow resistance, and Turning Cost which reflects path configuration complexities.</p>
-      <figure class="formula-img">
-        <img src="assets/images/LCP%20equation_black.png" alt="The Least Cost Path" loading="lazy">
-      </figure>
-      <p class="section-lead section-lead-on-color" data-i18n="science_voxel_lead">The UrbanCool Dynamics voxelises the 3D building model, traces potential airpaths, assigns friction costs near facades, and applies turning costs at each change in direction. It then calculates the cost along each airpath; a lower overall cost means better permeability.</p>
-      <div class="media-block media-block--video">
-        <span class="media-placeholder" data-i18n="science_media_model">[Model video]</span>
-      </div>
+        <h3 class="science-subtitle" data-i18n="science_sub2_title">The Least Cost Path — From Physics to Algorithm</h3>
+        <p class="section-lead section-lead-on-color" data-i18n="science_sub2_lead">Our new 3D Least Cost Path (LCP) method evaluates building permeability using two metrics, i.e. Friction Cost which represents airflow resistance, and Turning Cost which reflects path configuration complexities.</p>
+        <figure class="formula-img">
+          <img src="assets/images/LCP%20equation_black.png" alt="The Least Cost Path" loading="lazy">
+        </figure>
+        <p class="section-lead section-lead-on-color" data-i18n="science_voxel_lead">The UrbanCool Dynamics voxelises the 3D building model, traces potential airpaths, assigns friction costs near facades, and applies turning costs at each change in direction. It then calculates the cost along each airpath; a lower overall cost means better permeability.</p>
+        <div class="science-images-row">
+          <figure class="media-block media-block--video">
+            <img src="assets/images/chart-04.png" alt="The Least Cost Path" loading="lazy">
+          </figure>
+          <figure class="media-block media-block--video">
+            <img src="assets/images/chart-05.png" alt="The Least Cost Path" loading="lazy">
+          </figure>
+          <figure class="media-block media-block--video">
+            <img src="assets/images/chart-06.png" alt="The Least Cost Path" loading="lazy">
+          </figure>
+          <figure class="media-block media-block--video">
+            <img src="assets/images/chart-07.png" alt="The Least Cost Path" loading="lazy">
+          </figure>
+        </div>
 
-      <h3 class="science-subtitle" data-i18n="science_validation_title">Scientific Validation</h3>
-      <p class="section-lead section-lead-on-color" data-i18n="science_validation_lead">By comparing LCP and CFD outputs using linear, power-law and logarithmic models, the strong agreement (R² = 0.92 and 0.85 for the power-law and logarithmic models respectively) indicates a close alignment between the developed LCP method and the widely adopted CFD methodology.</p>
-      <div class="media-block media-block--video">
-        <span class="media-placeholder" data-i18n="science_media_lcp_cfd">[LCP vs. CFD diagram]</span>
+        <h3 class="science-subtitle" data-i18n="science_validation_title">Scientific Validation</h3>
+        <p class="section-lead section-lead-on-color" data-i18n="science_validation_lead">By comparing LCP and CFD outputs using linear, power-law and logarithmic models, the strong agreement (R² = 0.92 and 0.85 for the power-law and logarithmic models respectively) indicates a close alignment between the developed LCP method and the widely adopted CFD methodology.</p>
+        <div class="science-images-row">
+          <figure class="media-block media-block--video">
+            <img src="assets/images/chart-08.png" alt="LCP vs. CFD — Scientific Validation" loading="lazy">
+          </figure>
+          <figure class="media-block media-block--video">
+            <img src="assets/images/CFD%26LCP_results.png" alt="CFD and LCP results" loading="lazy">
+          </figure>
+        </div>
       </div>
     </section>
 

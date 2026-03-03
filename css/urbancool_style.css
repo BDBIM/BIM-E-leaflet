@@ -187,6 +187,28 @@
   min-height: 0;
 }
 
+/* Rising Temperature Crisis — two images row */
+.climate-images-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-unit);
+  margin-top: 1.5rem;
+}
+.climate-images-row .climate-img {
+  margin-top: 0;
+}
+.climate-images-row .climate-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 640px) {
+  .climate-images-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Multi-Scale Cooling subsection inside Our Solution */
 .solutions-cooling {
   margin-top: 2.5rem;
@@ -336,20 +358,28 @@
   color: rgba(255, 255, 255, 0.95) !important;
 }
 
-/* Science section — subsection titles and content aligned to same column */
+/* Science section — single content column so subtitles and content align */
+.science-content {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 #science .science-subtitle,
 #science .section-lead-on-color,
 #science .media-block,
 #science .formula-img {
-  max-width: var(--max-width);
+  max-width: 100%;
   width: 100%;
   box-sizing: border-box;
 }
 #science .section-lead-on-color {
-  max-width: var(--max-width);
+  max-width: 100%;
 }
 #science .science-subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
   font-weight: 600;
   margin: 2rem 0 0.75rem 0;
   color: #fff;
@@ -357,6 +387,39 @@
 }
 #science .science-subtitle:first-of-type {
   margin-top: 1rem;
+}
+#science .formula-img {
+  margin-left: 0;
+  margin-right: 0;
+}
+#science .formula-img img {
+  margin-left: 0;
+  margin-right: auto;
+}
+#science .media-block {
+  margin-left: 0;
+  margin-right: 0;
+  background: transparent;
+  border: none;
+  min-height: 0;
+}
+#science .media-block img {
+  object-fit: contain;
+}
+/* Science section — multiple images in a row (LCP: 4, Validation: 2) */
+#science .science-images-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-unit);
+  margin-top: 1rem;
+}
+#science .science-images-row .media-block {
+  margin-top: 0;
+}
+@media (max-width: 640px) {
+  #science .science-images-row {
+    grid-template-columns: 1fr;
+  }
 }
 #science .media-placeholder {
   display: block;
