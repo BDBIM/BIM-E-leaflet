@@ -16,7 +16,14 @@
           <ul class="nav-links">
             <li><a href="#about" data-i18n="nav_about">About</a></li>
             <li><a href="#compliance" data-i18n="nav_compliance">From Data to Compliance</a></li>
-            <li><a href="#capabilities" data-i18n="nav_capabilities">The 3-Certainty</a></li>
+            <li class="has-submenu">
+              <a href="#capabilities" data-i18n="nav_capabilities">The 3-Certainty</a>
+              <ul class="nav-submenu" aria-label="3-Certainty sections">
+                <li><a href="#certitude-design">Design Certainty</a></li>
+                <li><a href="#certitude-construction">Construction Certainty</a></li>
+                <li><a href="#certitude-lifecycle">Lifecycle Certainty</a></li>
+              </ul>
+            </li>
             <li><a href="#smart-features" data-i18n="nav_smart_features">Smart Features</a></li>
             <li><a href="#achievements" data-i18n="nav_achievements">Achievements</a></li>
             <li><a href="#more-info" data-i18n="nav_experience_tool">Experience the Tool</a></li>
@@ -43,7 +50,14 @@
     <ul class="nav-sidebar-links">
       <li><a href="#about" data-i18n="nav_about">About</a></li>
       <li><a href="#compliance" data-i18n="nav_compliance">From Data to Compliance</a></li>
-      <li><a href="#capabilities" data-i18n="nav_capabilities">The 3-Certainty</a></li>
+      <li>
+        <a href="#capabilities" data-i18n="nav_capabilities">The 3-Certainty</a>
+        <ul class="nav-sidebar-submenu" aria-label="3-Certainty sections">
+          <li><a href="#certitude-design">Design Certainty</a></li>
+          <li><a href="#certitude-construction">Construction Certainty</a></li>
+          <li><a href="#certitude-lifecycle">Lifecycle Certainty</a></li>
+        </ul>
+      </li>
       <li><a href="#smart-features" data-i18n="nav_smart_features">Smart Features</a></li>
       <li><a href="#achievements" data-i18n="nav_achievements">Achievements</a></li>
       <li><a href="#more-info" data-i18n="nav_experience_tool">Experience the Tool</a></li>
@@ -78,7 +92,7 @@
       <p class="section-lead" data-i18n="about_lead2">It executes a standardised and automated regulatory process, transforming design and checking workflow from manual to automated, through creating machine-readable rules.</p>
       <p class="section-lead" data-i18n="about_lead3">By bridging digital precision with physical assurance, we are building a world where every building stands resilient from concept to legacy.</p>
       <div class="media-block media-block--video media-block--embed">
-        <iframe src="https://www.youtube-nocookie.com/embed/m3R8dqxP4qg?si=_IthtEx9iJDT06-P" title="YouTube video player - FS Geneva Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/QP2QAN6Zk7s?si=A0A2cWhJcPI_NJPc" title="YouTube video player - FS Geneva Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </section>
 
@@ -165,7 +179,7 @@
     <section id="capabilities">
       <p class="section-tag" data-i18n="three_certitude_tag">THE 3-CERTAINTY</p>
       <p class="section-lead" data-i18n="three_certitude_lead">The FireCheck 4D is digital powerhouse which ensures every building project can achieve the "3-Certainty" in design, construction, and life-cycle.</p>
-      <div class="certitude-band" data-i18n="certitude_design">Design Certainty</div>
+      <div class="certitude-band" id="certitude-design" data-i18n="certitude_design">Design Certainty</div>
       <p class="section-tag" data-i18n="capabilities_tag">Design & analysis</p>
       <h2 class="section-title" data-i18n="capabilities_title">Simulate and Analyse for Statutory Compliance</h2>
 
@@ -211,7 +225,7 @@
           </figure>
           <figure class="media-item">
             <img src="assets/gifs/travel_distance_straight_skeleton.gif" alt="Straight skeleton for travel distance analysis" loading="lazy">
-            <figcaption data-i18n="fig_skeleton">Straight skeleton algorithm - Find the middle path of a room</figcaption>
+            <figcaption data-i18n="fig_skeleton">Straight skeleton algorithm - Find the centreline of the exit route</figcaption>
           </figure>
           <figure class="media-item">
             <img src="assets/images/Analyse_escape_options.png" alt="Analyse escape options along exit route" loading="lazy">
@@ -241,7 +255,7 @@
       </article>
     </section>
 
-    <div class="certitude-band" data-i18n="certitude_construction">Certitude de construction</div>
+    <div class="certitude-band" id="certitude-construction" data-i18n="certitude_construction">Certitude de construction</div>
 
     <section class="section-alt">
       <article class="content-block">
@@ -254,7 +268,7 @@
       </article>
     </section>
 
-    <div class="certitude-band" data-i18n="certitude_lifecycle">Certitude du cycle de vie</div>
+    <div class="certitude-band" id="certitude-lifecycle" data-i18n="certitude_lifecycle">Certitude du cycle de vie</div>
 
     <section class="section-alt">
       <article class="content-block">

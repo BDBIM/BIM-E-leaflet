@@ -64,7 +64,7 @@
       travel_lead: 'Unlike paper submission which relies on manual judgment and measurement of travel distances, we have adopted various geometrical principles and developed our own pathfinding algorithms to automate the travel distance assessment.',
       fig_farthest: 'Breadth-first search (BFS) algorithm - Identify the farthest part of a room',
       fig_shortest: 'A-star algorithm - Find the shortest path of exit',
-      fig_skeleton: 'Straight skeleton algorithm - Find the middle path of a room',
+      fig_skeleton: 'Straight skeleton algorithm - Find the centreline of the exit route',
       fig_escape_options: 'Analyse escape options along exit route',
       fig_deadend: 'Identify deadend',
       fire_resist_title: 'Fire Resisting Construction',

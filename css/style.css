@@ -102,6 +102,50 @@ nav {
   color: var(--color-accent);
 }
 
+/* Desktop nav submenu for The 3-Certainty */
+.nav-links li {
+  position: relative;
+}
+
+.nav-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-fillet);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  z-index: 120;
+}
+
+.nav-submenu li {
+  margin: 0;
+}
+
+.nav-submenu a {
+  display: block;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-submenu a:hover {
+  color: var(--color-accent);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.nav-links li.has-submenu:hover .nav-submenu,
+.nav-links li.has-submenu:focus-within .nav-submenu {
+  display: block;
+}
+
 .lang-switcher {
   display: flex;
   align-items: center;
@@ -241,6 +285,23 @@ nav {
 
 .nav-sidebar-links a:hover {
   color: var(--color-accent-secondary);
+}
+
+.nav-sidebar-submenu {
+  list-style: none;
+  margin: 0.35rem 0 0.6rem 0;
+  padding: 0 0 0 1rem;
+}
+
+.nav-sidebar-submenu li {
+  margin: 0;
+}
+
+.nav-sidebar-submenu a {
+  padding: 0.45rem 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.82);
+  border-bottom: none;
 }
 
 .nav-sidebar-lang {
