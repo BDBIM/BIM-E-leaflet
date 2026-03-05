@@ -747,10 +747,14 @@ section {
   background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
   color: #fff;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
   font-weight: 600;
   letter-spacing: 0.02em;
   margin: var(--space-lg) 0;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 /* Game CTA — redirect to online game */

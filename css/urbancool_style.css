@@ -316,6 +316,14 @@
   margin-right: auto;
 }
 
+/* Scientific Robustness — fixed background color */
+.urbancool-band[data-i18n="band_science"] {
+  background: #6bb89e;
+}
+#science.section-green {
+  background: #6bb89e;
+}
+
 /* Formula box — left-align with other section content (match centered 1200px block) */
 .section-green .formula-box {
   margin-left: calc((100% - min(100%, var(--max-width))) / 2);
