@@ -31,6 +31,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
 body {
@@ -174,7 +175,7 @@ nav {
   font-size: 0.9rem;
 }
 
-/* Hamburger — visible on mobile only */
+/* Hamburger — visible on mobile/tablet (below iPad Pro 11"/13" viewport) */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -324,7 +325,8 @@ nav {
   color: rgba(255, 255, 255, 0.4);
 }
 
-@media (max-width: 768px) {
+/* Sidebar for viewports below iPad Pro 11" (834px) and 13" (1032px) portrait */
+@media (max-width: 1024px) {
   .nav-toggle {
     display: flex;
   }
@@ -343,7 +345,7 @@ nav {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .nav-sidebar-overlay.is-open,
   .nav-sidebar.is-open {
     display: none !important;
