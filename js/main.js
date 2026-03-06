@@ -30,6 +30,13 @@
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
+
+    document.querySelectorAll('iframe[data-youtube-en][data-youtube-fr]').forEach(function (iframe) {
+      var nextSrc = lang === 'fr' ? iframe.getAttribute('data-youtube-fr') : iframe.getAttribute('data-youtube-en');
+      if (nextSrc && iframe.getAttribute('src') !== nextSrc) {
+        iframe.setAttribute('src', nextSrc);
+      }
+    });
   }
 
   function initI18n() {
