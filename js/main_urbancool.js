@@ -166,6 +166,21 @@
     });
   }
 
+  // SDG cards: touch devices can tap to expand/collapse text
+  function initSdgCardExpandOnTouch() {
+    var supportsHover = window.matchMedia('(hover: hover)').matches;
+    if (supportsHover) return;
+
+    var cards = document.querySelectorAll('.sdg-grid .sdg-card');
+    if (!cards.length) return;
+
+    cards.forEach(function (card) {
+      card.addEventListener('click', function () {
+        card.classList.toggle('is-expanded');
+      });
+    });
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initNavSidebar);
   } else {
@@ -176,5 +191,11 @@
     document.addEventListener('DOMContentLoaded', initWorkflowExpand);
   } else {
     initWorkflowExpand();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSdgCardExpandOnTouch);
+  } else {
+    initSdgCardExpandOnTouch();
   }
 })();
