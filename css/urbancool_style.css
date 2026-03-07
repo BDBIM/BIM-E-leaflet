@@ -621,15 +621,6 @@
   margin-right: auto;
 }
 
-.design-intro-row {
-  display: grid;
-  gap: 1rem 1.5rem;
-}
-
-.design-intro-demo {
-  width: 100%;
-}
-
 .design-intro-copy .section-title {
   margin-top: 0;
 }
@@ -638,8 +629,18 @@
   margin-bottom: 0;
 }
 
-.design-intro-demo .more-info-demo-title {
-  margin-top: 0;
+.design-gif-video-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.design-bdap-video-wrap .more-info-demo-title {
+  margin: 0 0 0.5rem 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .design-bdap-video {
@@ -647,10 +648,20 @@
   margin: 0;
 }
 
-@media (min-width: 980px) {
-  .design-intro-row {
-    grid-template-columns: minmax(0, 1.4fr) minmax(340px, 1fr);
-    align-items: start;
+@media (min-width: 900px) {
+  .design-gif-video-row {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .design-gif {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .design-bdap-video-wrap {
+    flex: 0 0 min(400px, 45%);
   }
 }
 
@@ -682,43 +693,17 @@
   color: rgba(255, 255, 255, 0.95);
 }
 
-/* Workflow expand button — collapsed by default */
-.workflow-expand-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin-top: 1rem;
-  padding: 0.4rem 0.8rem;
-  background: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: var(--radius-fillet);
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
-}
-
-.workflow-expand-btn:hover {
-  background: rgba(255, 255, 255, 0.35);
-  border-color: rgba(255, 255, 255, 0.6);
-}
-
-/* Workflow images box — hidden by default, shown when expanded */
+/* Workflow images box — always visible */
 .workflow-images-box {
-  display: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.workflow-images-box.is-expanded {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 0.75rem;
-}
-
-.workflow-images-box--2x2.is-expanded {
+.workflow-images-box--2x2 {
   grid-template-columns: repeat(2, 1fr);
 }
 

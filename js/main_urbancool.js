@@ -123,56 +123,6 @@
     });
   }
 
-  // Workflow expand/collapse — images hidden by default, show on click
-  // In wide screen (3 boxes horizontal), expand/collapse all together
-  var workflowWideBreakpoint = window.matchMedia('(min-width: 900px)');
-
-  function setWorkflowCardState(card, isExpanded) {
-    var box = card.querySelector('.workflow-images-box');
-    var btn = card.querySelector('.workflow-expand-btn');
-    var expandText = btn ? btn.querySelector('.expand-text') : null;
-    var collapseText = btn ? btn.querySelector('.collapse-text') : null;
-    if (box) {
-      box.classList.toggle('is-expanded', isExpanded);
-      box.setAttribute('aria-hidden', !isExpanded);
-    }
-    if (btn) {
-      btn.setAttribute('aria-expanded', isExpanded);
-      if (expandText) expandText.style.display = isExpanded ? 'none' : 'inline';
-      if (collapseText) collapseText.style.display = isExpanded ? 'inline' : 'none';
-    }
-  }
-
-  function initWorkflowExpand() {
-    var workflow = document.querySelector('.design-workflow');
-    if (!workflow) return;
-    var cards = workflow.querySelectorAll('.workflow-card');
-
-    workflow.querySelectorAll('.workflow-expand-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var card = this.closest('.workflow-card');
-        var controlsId = this.getAttribute('aria-controls');
-        var box = controlsId ? document.getElementById(controlsId) : null;
-        var expandText = this.querySelector('.expand-text');
-        var collapseText = this.querySelector('.collapse-text');
-        if (!box) return;
-
-        var isExpanded = box.classList.toggle('is-expanded');
-        this.setAttribute('aria-expanded', isExpanded);
-        box.setAttribute('aria-hidden', !isExpanded);
-        if (expandText) expandText.style.display = isExpanded ? 'none' : 'inline';
-        if (collapseText) collapseText.style.display = isExpanded ? 'inline' : 'none';
-
-        // Wide screen: sync all cards to the same expand/collapse state
-        if (workflowWideBreakpoint.matches) {
-          cards.forEach(function (c) {
-            if (c !== card) setWorkflowCardState(c, isExpanded);
-          });
-        }
-      });
-    });
-  }
-
   // SDG cards: touch devices can tap to expand/collapse text
   function initSdgCardExpandOnTouch() {
     var supportsHover = window.matchMedia('(hover: hover)').matches;
@@ -192,12 +142,6 @@
     document.addEventListener('DOMContentLoaded', initNavSidebar);
   } else {
     initNavSidebar();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initWorkflowExpand);
-  } else {
-    initWorkflowExpand();
   }
 
   if (document.readyState === 'loading') {

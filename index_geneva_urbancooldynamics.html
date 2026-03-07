@@ -256,26 +256,15 @@
 
     <section id="design" class="section-red">
       <p class="section-tag section-tag-light" data-i18n="design_tag">INSTANT DESIGN REVIEW AND GENERATION</p>
-      <div class="design-intro-row">
-        <div class="design-intro-copy">
-          <h2 class="section-title section-title-on-color" data-i18n="design_title">From Codes, Needs and Site to Design</h2>
-          <p class="section-lead section-lead-on-color" data-i18n="design_lead">Apart from building permeability analysis, the design process is further streamlined and integrated. Design options can be generated instantly in response to user needs while complying with other regulatory requirements on overall development density and building height as well as spatial requirements including building setback, open space, natural lighting and ventilation, etc.</p>
-        </div>
-        <div class="design-intro-demo">
-          <figure class="media-block media-block--embed design-bdap-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3KYRW60SL0c?si=AiiMNO_LRMCejUiz" title="YouTube video player - Demo of BDAP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </figure>
-        </div>
+      <div class="design-intro-copy">
+        <h2 class="section-title section-title-on-color" data-i18n="design_title">From Codes, Needs and Site to Design</h2>
+        <p class="section-lead section-lead-on-color" data-i18n="design_lead">Apart from building permeability analysis, the design process is further streamlined and integrated. Design options can be generated instantly in response to user needs while complying with other regulatory requirements on overall development density and building height as well as spatial requirements including building setback, open space, natural lighting and ventilation, etc.</p>
       </div>
       <div class="design-workflow">
         <article class="workflow-card">
           <h3 data-i18n="workflow_codes">From Codes to Design</h3>
           <p data-i18n="workflow_codes_desc">Parse regulations, zoning bylaws, building codes, accessibility standards, etc. into machine-readable rules</p>
-          <button type="button" class="workflow-expand-btn" aria-expanded="false" aria-controls="workflow-images-codes">
-            <span class="expand-text" data-i18n="workflow_expand">Expand</span>
-            <span class="collapse-text" data-i18n="workflow_collapse" style="display:none">Collapse</span>
-          </button>
-          <div class="workflow-images-box workflow-images-box--2x2" id="workflow-images-codes" aria-hidden="true">
+          <div class="workflow-images-box workflow-images-box--2x2" id="workflow-images-codes">
             <img src="assets/images/From_Codes_to_Design_1.png" alt="From Codes to Design 1" loading="lazy">
             <img src="assets/images/From_Codes_to_Design_2.png" alt="From Codes to Design 2" loading="lazy">
             <img src="assets/images/From_Codes_to_Design_3.png" alt="From Codes to Design 3" loading="lazy">
@@ -285,11 +274,7 @@
         <article class="workflow-card">
           <h3 data-i18n="workflow_needs">From Needs to Design</h3>
           <p data-i18n="workflow_needs_desc">Instant-translate users' needs into spatial and functional blocks and 3D massing</p>
-          <button type="button" class="workflow-expand-btn" aria-expanded="false" aria-controls="workflow-images-needs">
-            <span class="expand-text" data-i18n="workflow_expand">Expand</span>
-            <span class="collapse-text" data-i18n="workflow_collapse" style="display:none">Collapse</span>
-          </button>
-          <div class="workflow-images-box workflow-images-box--2x2" id="workflow-images-needs" aria-hidden="true">
+          <div class="workflow-images-box workflow-images-box--2x2" id="workflow-images-needs">
             <figure class="workflow-image-fig">
               <img src="assets/images/Studio.png" alt="Studio" loading="lazy">
               <figcaption data-i18n="needs_caption_studio">Studio</figcaption>
@@ -311,18 +296,22 @@
         <article class="workflow-card">
           <h3 data-i18n="workflow_site">From Site to Design</h3>
           <p data-i18n="workflow_site_desc">Auto-generate massing options in response to site contexts, configuration and orientations</p>
-          <button type="button" class="workflow-expand-btn" aria-expanded="false" aria-controls="workflow-images-site">
-            <span class="expand-text" data-i18n="workflow_expand">Expand</span>
-            <span class="collapse-text" data-i18n="workflow_collapse" style="display:none">Collapse</span>
-          </button>
-          <div class="workflow-images-box" id="workflow-images-site" aria-hidden="true">
+          <div class="workflow-images-box" id="workflow-images-site">
             <img src="assets/images/From_Site_to_Design.png" alt="From Site to Design" loading="lazy">
           </div>
         </article>
       </div>
-      <figure class="media-block media-block--gif design-gif">
-        <img src="assets/gifs/Instant_Design_Review_&_Generation.gif" alt="Instant Design Review and Generation" loading="lazy">
-      </figure>
+      <div class="design-gif-video-row">
+        <figure class="media-block media-block--gif design-gif">
+          <img src="assets/gifs/Instant_Design_Review_&_Generation.gif" alt="Instant Design Review and Generation" loading="lazy">
+        </figure>
+        <div class="design-bdap-video-wrap">
+          <p class="more-info-demo-title">Demo of BDAP</p>
+          <figure class="media-block media-block--embed design-bdap-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3KYRW60SL0c?si=AiiMNO_LRMCejUiz" title="YouTube video player - Demo of BDAP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </figure>
+        </div>
+      </div>
     </section>
 
     <section id="recognition" class="section-dark">
@@ -366,6 +355,7 @@
           <p class="achievement-meta" data-i18n="uc_achievement1_event">World Building Congress 2025</p>
           <p class="achievement-meta" data-i18n="uc_achievement1_org">International Council for Research and Innovation in Building and Construction</p>
           <a href="https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2090&context=cib-conferences" target="_blank" rel="noopener noreferrer" class="achievement-link-btn">Research Paper</a>
+          <a href="assets/images/paper.pdf" target="_blank" rel="noopener noreferrer" class="achievement-link-btn">Research Paper (PDF)</a>
         </div>
         <div class="achievement-item">
           <p class="achievement-awards"><strong data-i18n="uc_achievement2_award1">Best Innovation Award</strong><br><strong data-i18n="uc_achievement2_award2">Gold Award in API/Plugin Category</strong></p>

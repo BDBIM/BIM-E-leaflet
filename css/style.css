@@ -1022,6 +1022,17 @@ section {
   color: var(--color-text);
 }
 
+.benefits-img {
+  margin: 1.5rem 0 0;
+}
+
+.benefits-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-fillet);
+}
+
 /* Utility */
 .visually-hidden {
   position: absolute;
