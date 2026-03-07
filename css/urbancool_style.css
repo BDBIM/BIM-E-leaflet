@@ -636,16 +636,14 @@
   margin-top: 1.5rem;
 }
 
-.design-bdap-video-wrap .more-info-demo-title {
-  margin: 0 0 0.5rem 0;
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1rem;
-  font-weight: 600;
+.design-bdap-video {
+  max-width: 960px;
+  margin: 0;
+  width: 100%;
 }
 
-.design-bdap-video {
-  max-width: 560px;
-  margin: 0;
+.design-bdap-video video {
+  pointer-events: none;
 }
 
 @media (min-width: 900px) {
@@ -661,7 +659,8 @@
   }
 
   .design-bdap-video-wrap {
-    flex: 0 0 min(400px, 45%);
+    flex: 1 1 58%;
+    min-width: 380px;
   }
 }
 
