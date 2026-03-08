@@ -246,7 +246,7 @@
       uc_achievement1_research_paper_pdf: 'Article de recherche (PDF)',
       uc_achievement2_award1: 'Prix de la meilleure innovation',
       uc_achievement2_award2: 'Prix d\'or dans la catégorie API/Plugin',
-      uc_achievement2_event: 'BIM Automation Arena 2025',
+      uc_achievement2_event: 'Arène d\'automatisation BIM 2025',
       uc_achievement2_org: 'L\'Institut de Hong Kong pour la modélisation des informations du bâtiment',
       uc_achievement3_award1: 'Lauréat dans la catégorie Recherche et innovation',
       uc_achievement3_award2: 'Prix de la valeur ajoutée',

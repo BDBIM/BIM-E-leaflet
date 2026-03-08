@@ -176,7 +176,7 @@
       achievements_tag: 'RÉALISATIONS',
       achievement1_award1: 'Prix de la meilleure innovation',
       achievement1_award2: 'Prix d\'or dans la catégorie API/Plugin',
-      achievement1_event: 'BIM Automation Arena 2025',
+      achievement1_event: 'Arène d\'automatisation BIM 2025',
       achievement1_org: 'L\'Institut de Hong Kong pour la modélisation des informations du bâtiment',
       achievement2_award1: 'Lauréat dans la catégorie Recherche et innovation',
       achievement2_award2: 'Prix de la valeur ajoutée',
