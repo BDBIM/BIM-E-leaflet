@@ -39,7 +39,8 @@
       climate_lead2: 'Dense clusters of tall buildings trap heat and stall the wind, driving urban temperatures to rise much faster than the global average and exposing millions to dangerous thermal stress. The urban heat island effect compounds global warming, intensifying heatwaves and pushing up energy demand.',
       stat_trend: '+23 to +103%',
       stat_trend_label: 'compare to global trend',
-      stat_heatwave_label: 'Dangerous heat wave markers',
+      stat_heatwave_value: 'OVER 480,000 heat-related deaths',
+      stat_heatwave_label: 'occur each year, according to WHO',
       solutions_band: 'Our Solution',
       solutions_tag: 'Our Solution',
       solutions_title: 'UrbanCool Dynamics',
@@ -129,7 +130,7 @@
       more_info: 'More Information',
       more_info_tools: 'Download the Tools',
       more_info_tutorial: 'Tutorial video',
-      footer_main: 'UrbanCool Dynamics — A BIM Building Permeability Checker. Buildings Department · Ronald Lu & Partners · ARUP · VIRCON · The Chinese University of Hong Kong.',
+      footer_main: 'UrbanCool Dynamics — A BIM Building Permeability Checker. Buildings Department · Ronald Lu & Partners  · The Chinese University of Hong Kong · ARUP · VIRCON.',
       footer_hosted: 'Hosted at'
     },
     fr: {
@@ -165,7 +166,8 @@
       climate_lead2: 'Les concentrations denses de grands bâtiments piègent la chaleur et bloquent le vent, faisant monter les températures urbaines bien plus vite que la moyenne mondiale et exposant des millions de personnes à un stress thermique dangereux. L\'effet d\'îlot de chaleur urbain s\'ajoute au réchauffement planétaire, intensifiant les vagues de chaleur et augmentant la demande énergétique.',
       stat_trend: '+23 à +103 %',
       stat_trend_label: 'par rapport à la tendance mondiale',
-      stat_heatwave_label: 'Marqueurs de vague de chaleur dangereuse',
+      stat_heatwave_value: 'PLUS DE 480 000 décès liés à la chaleur',
+      stat_heatwave_label: 'se produisent chaque année, selon l\'OMS',
       solutions_band: 'Notre solution',
       solutions_tag: 'Notre solution',
       solutions_title: 'UrbanCool Dynamics',
@@ -255,7 +257,7 @@
       more_info: 'Plus d\'informations',
       more_info_tools: 'Télécharger les outils',
       more_info_tutorial: 'Vidéo tutoriel',
-      footer_main: 'UrbanCool Dynamics — Un vérificateur BIM de perméabilité des bâtiments. Buildings Department · Ronald Lu & Partners · ARUP · VIRCON · The Chinese University of Hong Kong.',
+      footer_main: 'UrbanCool Dynamics — Un vérificateur BIM de perméabilité des bâtiments. Buildings Department · Ronald Lu & Partners · The Chinese University of Hong Kong · ARUP · VIRCON.',
       footer_hosted: 'Hébergé sur'
     }
   };

@@ -137,11 +137,19 @@
 }
 .painpoints-media {
   margin-top: 1.5rem;
+  flex-direction: column;
+  align-items: stretch;
 }
 .painpoints-media img {
   width: 100%;
   height: auto;
   border-radius: 4px;
+}
+
+/* Solutions media with figcaption — stack caption below video */
+figure.media-block.solutions-media {
+  flex-direction: column;
+  align-items: stretch;
 }
 
 /* Climate video — unclickable, autoplay, stops at end */
@@ -178,6 +186,17 @@
   margin: 0;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.4;
+}
+
+.climate-chart-credit,
+.media-credit {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0.5rem 0 0.5rem 0;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+  text-align: center;
 }
 
 /* Cooling section GIF — transparent, no background or border */
@@ -1042,6 +1061,10 @@
   width: 300px;
   height: 100px;
   object-fit: contain;
+}
+
+.urbancool-footer-logos .footer-logo[src*="CUHK_white.png"] {
+  max-width: 250px;
 }
 
 .urbancool-footer {
